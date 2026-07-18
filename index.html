@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MerkaLatina Colombia — tecnología, hogar, moda, belleza y deportes con envío nacional y pago contra entrega.">
+  <title>MerkaLatina Colombia | Tienda online para Colombia</title>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" data-header>
+    <div class="header-main">
+      <a class="brand" href="#" aria-label="Ir al inicio de MerkaLatina Colombia">
+        <img class="brand-logo" src="assets/images/icons/logo-transparent.png" alt="MerkaLatina Colombia">
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle>
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="primary-nav" id="primary-navigation" aria-label="Menu principal" data-navigation>
+        <a href="#categorias">Tecnologia</a>
+        <a href="#categorias">Hogar</a>
+        <a href="#categorias">Moda</a>
+        <a href="#categorias">Belleza</a>
+        <a href="#categorias">Deportes</a>
+        <a href="#productos">Ofertas</a>
+      </nav>
+
+      <form class="header-search" role="search" aria-label="Buscar productos">
+        <label class="sr-only" for="site-search">Buscar productos</label>
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input id="site-search" type="search" placeholder="Buscar productos, marcas y categorias">
+        <button type="submit" aria-label="Buscar">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </form>
+
+      <div class="header-actions" aria-label="Acciones de usuario">
+        <a class="header-action" href="#" aria-label="Mi cuenta">
+          <img class="action-icon" src="assets/images/icons/hero1.png" alt="">
+          <span>Cuenta</span>
+        </a>
+        <a class="header-action cart-action" href="#carrito" aria-label="Carrito de compras">
+          <img class="action-icon" src="assets/images/icons/hero2.png" alt="">
+          <span>Carrito</span>
+          <strong data-cart-count>0</strong>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" aria-label="Promociones principales">
+      <div class="swiper hero-swiper" data-hero-swiper>
+        <div class="swiper-wrapper">
+          <article class="swiper-slide hero-slide hero-slide-tech">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+              <span class="hero-kicker">Tecnologia premium</span>
+              <h1>Compra inteligente para vivir mejor.</h1>
+              <p>Encuentra productos seleccionados para trabajar, crear y disfrutar con envio nacional.</p>
+              <a class="hero-button" href="#productos">
+                Comprar ahora
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="swiper-slide hero-slide hero-slide-home">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+              <span class="hero-kicker">Hogar y estilo</span>
+              <h2>Renueva tus espacios con elegancia.</h2>
+              <p>Soluciones para cocina, decoracion y bienestar pensadas para hogares modernos.</p>
+              <a class="hero-button" href="#categorias">
+                Ver coleccion
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="swiper-slide hero-slide hero-slide-fashion">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+              <span class="hero-kicker">Moda y belleza</span>
+              <h2>Todo lo esencial para tu estilo diario.</h2>
+              <p>Descubre favoritos de temporada en moda, cuidado personal y accesorios.</p>
+              <a class="hero-button" href="#productos">
+                Descubrir ofertas
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <button class="hero-nav hero-nav-prev" type="button" aria-label="Banner anterior">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="hero-nav hero-nav-next" type="button" aria-label="Banner siguiente">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- FRANJA DE CONFIANZA -->
+    <section class="trust-strip" aria-label="Beneficios de comprar en MerkaLatina">
+      <ul class="trust-list">
+        <li class="trust-item">
+          <i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
+          <div>
+            <strong>Envio a toda Colombia</strong>
+            <span>2 a 5 dias habiles</span>
+          </div>
+        </li>
+        <li class="trust-item">
+          <i class="fa-solid fa-hand-holding-dollar" aria-hidden="true"></i>
+          <div>
+            <strong>Pago contra entrega</strong>
+            <span>Paga cuando recibes</span>
+          </div>
+        </li>
+        <li class="trust-item">
+          <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+          <div>
+            <strong>Garantia de cambio</strong>
+            <span>8 dias para devoluciones</span>
+          </div>
+        </li>
+        <li class="trust-item">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+          <div>
+            <strong>Soporte por WhatsApp</strong>
+            <span>Respuesta el mismo dia</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- CATEGORIAS -->
+    <section class="categories" id="categorias" aria-label="Categorias destacadas" data-reveal>
+      <div class="section-heading">
+        <span class="section-kicker">Explora</span>
+        <h2>Compra por categoria</h2>
+      </div>
+      <div class="category-grid">
+        <a class="category-card" href="#productos">
+          <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=600&q=80" alt="Tecnologia">
+          <span>Tecnologia</span>
+        </a>
+        <a class="category-card" href="#productos">
+          <img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?auto=format&fit=crop&w=600&q=80" alt="Hogar">
+          <span>Hogar</span>
+        </a>
+        <a class="category-card" href="#productos">
+          <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=600&q=80" alt="Moda">
+          <span>Moda</span>
+        </a>
+        <a class="category-card" href="#productos">
+          <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=600&q=80" alt="Belleza">
+          <span>Belleza</span>
+        </a>
+        <a class="category-card" href="#productos">
+          <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=600&q=80" alt="Deportes">
+          <span>Deportes</span>
+        </a>
+        <a class="category-card" href="#productos">
+          <img src="https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?auto=format&fit=crop&w=600&q=80" alt="Ofertas">
+          <span>Ofertas</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS DESTACADOS -->
+    <section class="products" id="productos" aria-label="Productos destacados" data-reveal>
+      <div class="section-heading">
+        <span class="section-kicker">Lo mas pedido</span>
+        <h2>Productos destacados</h2>
+      </div>
+
+      <p class="products-empty" data-products-empty hidden>
+        No encontramos productos con ese nombre. Intenta con otra palabra.
+      </p>
+
+      <div class="product-grid">
+        <article class="product-card" data-product-name="Audifonos inalambricos Pro" data-product-price="129900">
+          <span class="product-badge">Nuevo</span>
+          <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80" alt="Audifonos inalambricos Pro">
+          <div class="product-body">
+            <h3>Audifonos inalambricos Pro</h3>
+            <p class="product-price">$129.900 COP</p>
+            <button type="button" class="product-add" data-add-to-cart>Agregar al carrito</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-product-name="Lampara LED de escritorio" data-product-price="79900">
+          <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=600&q=80" alt="Lampara LED de escritorio">
+          <div class="product-body">
+            <h3>Lampara LED de escritorio</h3>
+            <p class="product-price">$79.900 COP</p>
+            <button type="button" class="product-add" data-add-to-cart>Agregar al carrito</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-product-name="Chaqueta impermeable" data-product-price="159900">
+          <span class="product-badge product-badge-offer">-20%</span>
+          <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80" alt="Chaqueta impermeable">
+          <div class="product-body">
+            <h3>Chaqueta impermeable</h3>
+            <p class="product-price">$159.900 COP</p>
+            <button type="button" class="product-add" data-add-to-cart>Agregar al carrito</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-product-name="Set de brochas de maquillaje" data-product-price="59900">
+          <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=600&q=80" alt="Set de brochas de maquillaje">
+          <div class="product-body">
+            <h3>Set de brochas de maquillaje</h3>
+            <p class="product-price">$59.900 COP</p>
+            <button type="button" class="product-add" data-add-to-cart>Agregar al carrito</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-product-name="Balon de futbol edicion pro" data-product-price="89900">
+          <img src="https://images.unsplash.com/photo-1614632537197-38a17061c2bd?auto=format&fit=crop&w=600&q=80" alt="Balon de futbol edicion pro">
+          <div class="product-body">
+            <h3>Balon de futbol edicion pro</h3>
+            <p class="product-price">$89.900 COP</p>
+            <button type="button" class="product-add" data-add-to-cart>Agregar al carrito</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-product-name="Organizador de cocina modular" data-product-price="99900">
+          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="Organizador de cocina modular">
+          <div class="product-body">
+            <h3>Organizador de cocina modular</h3>
+            <p class="product-price">$99.900 COP</p>
+            <button type="button" class="product-add" data-add-to-cart>Agregar al carrito</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="testimonials" aria-label="Opiniones de clientes" data-reveal>
+      <div class="section-heading">
+        <span class="section-kicker">Confianza</span>
+        <h2>Lo que dicen nuestros clientes</h2>
+      </div>
+      <div class="testimonial-grid">
+        <figure class="testimonial-card">
+          <div class="testimonial-stars" aria-hidden="true">★★★★★</div>
+          <blockquote>Pedi un audifono y llego en tres dias a mi casa en Medellin. Todo perfecto.</blockquote>
+          <figcaption>— Camila R., Medellin</figcaption>
+        </figure>
+        <figure class="testimonial-card">
+          <div class="testimonial-stars" aria-hidden="true">★★★★★</div>
+          <blockquote>Me gusto poder pagar contra entrega, senti mas confianza para comprar por primera vez.</blockquote>
+          <figcaption>— Julian T., Cali</figcaption>
+        </figure>
+        <figure class="testimonial-card">
+          <div class="testimonial-stars" aria-hidden="true">★★★★★</div>
+          <blockquote>El soporte por WhatsApp respondio rapido cuando tuve una duda sobre mi pedido.</blockquote>
+          <figcaption>— Andrea M., Barranquilla</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- CTA WHATSAPP / NEWSLETTER -->
+    <section class="cta-band" id="carrito" aria-label="Contacto y novedades" data-reveal>
+      <div class="cta-content">
+        <h2>Recibe ofertas antes que nadie</h2>
+        <p>Escribenos por WhatsApp para asesoria personalizada o dejanos tu correo para enterarte de las promociones.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="cta-whatsapp" href="https://wa.me/573000000000" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+          Escribir por WhatsApp
+        </a>
+        <form class="cta-newsletter">
+          <label class="sr-only" for="newsletter-email">Correo electronico</label>
+          <input id="newsletter-email" type="email" placeholder="tu@correo.com" required>
+          <button type="submit">Suscribirme</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img class="brand-logo footer-logo" src="assets/images/icons/logo-transparent.png" alt="MerkaLatina Colombia">
+        <p>Marketplace colombiano de tecnologia, hogar, moda, belleza y deportes.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://wa.me/573000000000" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <nav class="footer-column" aria-label="Categorias">
+        <h3>Categorias</h3>
+        <a href="#categorias">Tecnologia</a>
+        <a href="#categorias">Hogar</a>
+        <a href="#categorias">Moda</a>
+        <a href="#categorias">Belleza</a>
+        <a href="#categorias">Deportes</a>
+      </nav>
+
+      <nav class="footer-column" aria-label="Ayuda">
+        <h3>Ayuda</h3>
+        <a href="#">Estado de mi pedido</a>
+        <a href="#">Cambios y devoluciones</a>
+        <a href="#">Medios de pago</a>
+        <a href="#">Preguntas frecuentes</a>
+      </nav>
+
+      <div class="footer-column">
+        <h3>Pagos aceptados</h3>
+        <div class="footer-payments" aria-label="Metodos de pago aceptados">
+          <i class="fa-brands fa-cc-visa" aria-hidden="true"></i>
+          <i class="fa-brands fa-cc-mastercard" aria-hidden="true"></i>
+          <i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i>
+          <i class="fa-solid fa-truck" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 MerkaLatina Colombia. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
