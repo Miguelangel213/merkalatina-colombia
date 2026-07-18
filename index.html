@@ -44,11 +44,11 @@
           <img class="action-icon" src="assets/images/icons/hero1.png" alt="">
           <span>Cuenta</span>
         </a>
-        <a class="header-action cart-action" href="#carrito" aria-label="Carrito de compras">
+        <button type="button" class="header-action cart-action" data-cart-open aria-label="Abrir carrito de compras" aria-haspopup="dialog">
           <img class="action-icon" src="assets/images/icons/hero2.png" alt="">
           <span>Carrito</span>
           <strong data-cart-count>0</strong>
-        </a>
+        </button>
       </div>
     </div>
   </header>
@@ -187,62 +187,8 @@
         No encontramos productos con ese nombre. Intenta con otra palabra.
       </p>
 
-      <div class="product-grid">
-        <article class="product-card" data-product-name="Audifonos inalambricos Pro" data-product-price="129900">
-          <span class="product-badge">Nuevo</span>
-          <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80" alt="Audifonos inalambricos Pro">
-          <div class="product-body">
-            <h3>Audifonos inalambricos Pro</h3>
-            <p class="product-price">$129.900 COP</p>
-            <button type="button" class="product-add" data-add-to-cart>Agregar al carrito</button>
-          </div>
-        </article>
-
-        <article class="product-card" data-product-name="Lampara LED de escritorio" data-product-price="79900">
-          <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=600&q=80" alt="Lampara LED de escritorio">
-          <div class="product-body">
-            <h3>Lampara LED de escritorio</h3>
-            <p class="product-price">$79.900 COP</p>
-            <button type="button" class="product-add" data-add-to-cart>Agregar al carrito</button>
-          </div>
-        </article>
-
-        <article class="product-card" data-product-name="Chaqueta impermeable" data-product-price="159900">
-          <span class="product-badge product-badge-offer">-20%</span>
-          <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80" alt="Chaqueta impermeable">
-          <div class="product-body">
-            <h3>Chaqueta impermeable</h3>
-            <p class="product-price">$159.900 COP</p>
-            <button type="button" class="product-add" data-add-to-cart>Agregar al carrito</button>
-          </div>
-        </article>
-
-        <article class="product-card" data-product-name="Set de brochas de maquillaje" data-product-price="59900">
-          <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=600&q=80" alt="Set de brochas de maquillaje">
-          <div class="product-body">
-            <h3>Set de brochas de maquillaje</h3>
-            <p class="product-price">$59.900 COP</p>
-            <button type="button" class="product-add" data-add-to-cart>Agregar al carrito</button>
-          </div>
-        </article>
-
-        <article class="product-card" data-product-name="Balon de futbol edicion pro" data-product-price="89900">
-          <img src="https://images.unsplash.com/photo-1614632537197-38a17061c2bd?auto=format&fit=crop&w=600&q=80" alt="Balon de futbol edicion pro">
-          <div class="product-body">
-            <h3>Balon de futbol edicion pro</h3>
-            <p class="product-price">$89.900 COP</p>
-            <button type="button" class="product-add" data-add-to-cart>Agregar al carrito</button>
-          </div>
-        </article>
-
-        <article class="product-card" data-product-name="Organizador de cocina modular" data-product-price="99900">
-          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="Organizador de cocina modular">
-          <div class="product-body">
-            <h3>Organizador de cocina modular</h3>
-            <p class="product-price">$99.900 COP</p>
-            <button type="button" class="product-add" data-add-to-cart>Agregar al carrito</button>
-          </div>
-        </article>
+      <div class="product-grid" data-product-grid>
+        <p class="products-loading" data-products-loading>Cargando productos...</p>
       </div>
     </section>
 
@@ -336,6 +282,70 @@
       <p>© 2026 MerkaLatina Colombia. Todos los derechos reservados.</p>
     </div>
   </footer>
+
+  <div class="cart-overlay" data-cart-overlay hidden></div>
+
+  <aside class="cart-drawer" data-cart-drawer aria-hidden="true" aria-label="Carrito de compras">
+    <div class="cart-drawer-header">
+      <h2><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i> Tu carrito</h2>
+      <button type="button" class="cart-close" data-cart-close aria-label="Cerrar carrito">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="cart-drawer-body" data-cart-view>
+      <ul class="cart-items" data-cart-items></ul>
+      <p class="cart-empty" data-cart-empty hidden>
+        Tu carrito esta vacio. Explora los <a href="#productos" data-cart-close-link>productos destacados</a>.
+      </p>
+    </div>
+
+    <div class="cart-drawer-footer" data-cart-footer hidden>
+      <div class="cart-total-row">
+        <span>Total</span>
+        <strong data-cart-total>$0 COP</strong>
+      </div>
+      <button type="button" class="cart-checkout-btn" data-open-checkout>
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Finalizar por WhatsApp
+      </button>
+    </div>
+
+    <form class="checkout-form" data-checkout-form hidden novalidate>
+      <button type="button" class="checkout-back" data-checkout-back>
+        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Volver al carrito
+      </button>
+      <h3>Datos de entrega</h3>
+
+      <label class="checkout-field">
+        Nombre completo
+        <input type="text" name="nombre" autocomplete="name" required>
+      </label>
+      <label class="checkout-field">
+        Telefono / WhatsApp
+        <input type="tel" name="telefono" autocomplete="tel" required>
+      </label>
+      <label class="checkout-field">
+        Ciudad
+        <input type="text" name="ciudad" autocomplete="address-level2" required>
+      </label>
+      <label class="checkout-field">
+        Direccion completa
+        <input type="text" name="direccion" autocomplete="street-address" required>
+      </label>
+      <label class="checkout-field">
+        Notas para la entrega (opcional)
+        <textarea name="notas" rows="2"></textarea>
+      </label>
+
+      <p class="checkout-note">
+        Pagas en efectivo cuando recibes tu pedido. Al enviar, se abrira WhatsApp con el resumen para confirmar.
+      </p>
+
+      <button type="submit" class="checkout-submit">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Enviar pedido por WhatsApp
+      </button>
+    </form>
+  </aside>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="script.js"></script>

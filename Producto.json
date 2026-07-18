@@ -1,0 +1,50 @@
+[
+  {
+    "id": "audifonos-pro",
+    "name": "Audifonos inalambricos Pro",
+    "price": 129900,
+    "image": "assets/images/products/audifonos-pro.jpg",
+    "category": "tecnologia",
+    "badge": "Nuevo"
+  },
+  {
+    "id": "lampara-led",
+    "name": "Lampara LED de escritorio",
+    "price": 79900,
+    "image": "assets/images/products/lampara-led.jpg",
+    "category": "hogar",
+    "badge": null
+  },
+  {
+    "id": "chaqueta-impermeable",
+    "name": "Chaqueta impermeable",
+    "price": 159900,
+    "image": "assets/images/products/chaqueta-impermeable.jpg",
+    "category": "moda",
+    "badge": "-20%"
+  },
+  {
+    "id": "brochas-maquillaje",
+    "name": "Set de brochas de maquillaje",
+    "price": 59900,
+    "image": "assets/images/products/brochas-maquillaje.jpg",
+    "category": "belleza",
+    "badge": null
+  },
+  {
+    "id": "balon-futbol",
+    "name": "Balon de futbol edicion pro",
+    "price": 89900,
+    "image": "assets/images/products/balon-futbol.jpg",
+    "category": "deportes",
+    "badge": null
+  },
+  {
+    "id": "organizador-cocina",
+    "name": "Organizador de cocina modular",
+    "price": 99900,
+    "image": "assets/images/products/organizador-cocina.jpg",
+    "category": "hogar",
+    "badge": null
+  }
+]
