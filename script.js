@@ -38,7 +38,7 @@ async function initProducts() {
           : "";
 
         return `
-          <article class="product-card" data-product-name="${product.name}" data-product-price="${product.price}">
+          <article class="product-card" data-product-name="${product.name}" data-product-price="${product.price}" data-product-category="${product.category || ""}">
             ${badgeHtml}
             <img src="${product.image}" alt="${product.name}" loading="lazy">
             <div class="product-body">
@@ -172,19 +172,13 @@ function initHeroSwiper() {
 }
 
 /* ------------------------------------------------------------------ */
-/* Buscador del header                                                  */
+/* Buscador del header + filtrado por categoria (menu y grid)          */
 /* ------------------------------------------------------------------ */
 function initSearch() {
   const form = document.querySelector(".header-search");
   const input = document.getElementById("site-search");
-  if (!form || !input) return;
 
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const query = input.value.trim();
-    if (!query) return;
-
-    // Filtra las tarjetas de producto visibles en la página por nombre
+  const filterByText = (query) => {
     const cards = document.querySelectorAll("[data-product-name]");
     if (!cards.length) return;
 
@@ -200,10 +194,41 @@ function initSearch() {
 
     const emptyState = document.querySelector("[data-products-empty]");
     if (emptyState) emptyState.hidden = anyMatch;
+  };
 
+  const filterByCategory = (category) => {
+    const cards = document.querySelectorAll("[data-product-name]");
+    if (!cards.length) return;
+
+    let anyMatch = false;
+    cards.forEach((card) => {
+      const matches = !category || card.dataset.productCategory === category;
+      card.style.display = matches ? "" : "none";
+      if (matches) anyMatch = true;
+    });
+
+    const emptyState = document.querySelector("[data-products-empty]");
+    if (emptyState) emptyState.hidden = anyMatch;
+  };
+
+  form?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const query = input?.value.trim();
+    if (!query) return;
+    filterByText(query);
     document
       .getElementById("productos")
       ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  // Enlaces del menu principal y tarjetas de categoria filtran por categoria
+  document.querySelectorAll("[data-category]").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const category = link.dataset.category;
+      if (!category) return;
+      // Deja que el ancla haga scroll de forma natural; solo filtramos despues
+      window.setTimeout(() => filterByCategory(category), 300);
+    });
   });
 }
 
