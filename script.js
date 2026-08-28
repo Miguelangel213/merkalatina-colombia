@@ -9,7 +9,7 @@ const CATEGORY_DEFINITIONS = [
     label: "Hogar",
     kicker: "Hogar y estilo",
     title: "Todo para renovar tu hogar.",
-    description: "Soluciones practicas para cocina, orden, decoracion y bienestar en casa.",
+    description: "Soluciones prácticas para cocina, orden, decoración y bienestar en casa.",
     image: "https://images.unsplash.com/photo-1484101403633-562f891dc89a?auto=format&fit=crop&w=1800&q=85"
   },
   {
@@ -23,9 +23,9 @@ const CATEGORY_DEFINITIONS = [
   {
     slug: "infantil",
     label: "Infantil",
-    kicker: "Para los pequenos",
-    title: "Productos para ninos y bebes.",
-    description: "Encuentra opciones practicas para juego, cuidado, ropa y vida familiar.",
+    kicker: "Para los pequeños",
+    title: "Productos para niños y bebés.",
+    description: "Encuentra opciones prácticas para juego, cuidado, ropa y vida familiar.",
     image: "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=1800&q=85"
   },
   {
@@ -33,30 +33,30 @@ const CATEGORY_DEFINITIONS = [
     label: "Mascotas",
     kicker: "Amigos de casa",
     title: "Accesorios y bienestar para mascotas.",
-    description: "Todo lo esencial para cuidar, consentir y acompanar a tus mascotas.",
+    description: "Todo lo esencial para cuidar, consentir y acompañar a tus mascotas.",
     image: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1800&q=85"
   },
   {
     slug: "tecnologia",
-    label: "Tecnologia",
-    kicker: "Tecnologia premium",
-    title: "Tecnologia para trabajar y disfrutar.",
-    description: "Dispositivos, accesorios y gadgets elegidos para tu dia a dia.",
+    label: "Tecnología",
+    kicker: "Tecnología premium",
+    title: "Tecnología para trabajar y disfrutar.",
+    description: "Dispositivos, accesorios y gadgets elegidos para tu día a día.",
     image: "https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=1800&q=85"
   },
   {
     slug: "vestuario-hombre",
     label: "Vestuario hombre",
     kicker: "Moda hombre",
-    title: "Prendas para todos los dias.",
-    description: "Basicos, favoritos de temporada y piezas comodas para vestir mejor.",
+    title: "Prendas para todos los días.",
+    description: "Básicos, favoritos de temporada y piezas cómodas para vestir mejor.",
     image: "https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?auto=format&fit=crop&w=1800&q=85"
   },
   {
     slug: "vestuario-mujer",
     label: "Vestuario mujer",
     kicker: "Moda mujer",
-    title: "Estilo versatil para cada plan.",
+    title: "Estilo versátil para cada plan.",
     description: "Ropa, accesorios y favoritos para construir looks con facilidad.",
     image: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=1800&q=85"
   },
@@ -64,40 +64,40 @@ const CATEGORY_DEFINITIONS = [
     slug: "calzado",
     label: "Calzado",
     kicker: "Pisadas con estilo",
-    title: "Calzado para moverte comodo.",
+    title: "Calzado para moverte cómodo.",
     description: "Opciones urbanas, casuales y deportivas para completar tu outfit.",
     image: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=1800&q=85"
   },
   {
     slug: "vehiculos",
-    label: "Vehiculos",
+    label: "Vehículos",
     kicker: "Movilidad y cuidado",
-    title: "Accesorios para vehiculos.",
-    description: "Productos utiles para mantenimiento, viajes y comodidad en carretera.",
+    title: "Accesorios para vehículos.",
+    description: "Productos útiles para mantenimiento, viajes y comodidad en carretera.",
     image: "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1800&q=85"
   },
   {
     slug: "electrodomesticos",
-    label: "Electrodomesticos",
+    label: "Electrodomésticos",
     kicker: "Casa eficiente",
-    title: "Electrodomesticos para tu rutina.",
-    description: "Equipos y soluciones para ahorrar tiempo y hacer mas facil cada tarea.",
+    title: "Electrodomésticos para tu rutina.",
+    description: "Equipos y soluciones para ahorrar tiempo y hacer más fácil cada tarea.",
     image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=1800&q=85"
   },
   {
     slug: "deportes",
     label: "Deportes",
     kicker: "Entrena mejor",
-    title: "Equipo para moverte con energia.",
+    title: "Equipo para moverte con energía.",
     description: "Accesorios, ropa y productos para entrenar en casa o al aire libre.",
     image: "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1800&q=85"
   },
   {
     slug: "herramientas",
     label: "Herramientas",
-    kicker: "Hazlo facil",
+    kicker: "Hazlo fácil",
     title: "Herramientas para reparar y crear.",
-    description: "Aliados practicos para arreglos, proyectos y mantenimiento del hogar.",
+    description: "Aliados prácticos para arreglos, proyectos y mantenimiento del hogar.",
     image: "https://images.unsplash.com/photo-1581147036324-c1c9a3c7c78d?auto=format&fit=crop&w=1800&q=85"
   },
   {
@@ -115,7 +115,7 @@ const CATEGORY_BY_SLUG = new Map(
 );
 
 const CART_STORAGE_KEY = "merkalatina:cart";
-const WHATSAPP_NUMBER = "573000000000";
+const WHATSAPP_NUMBER = "573044151020";
 
 document.addEventListener("DOMContentLoaded", () => {
   renderCategoryPageShell();
@@ -201,15 +201,8 @@ function renderCategoryPageShell() {
 
   const slug = document.body.dataset.category || "hogar";
   const category = getCategoryBySlug(slug) || CATEGORY_DEFINITIONS[0];
-  const navLinks = CATEGORY_DEFINITIONS.map((item) => {
-    const isActive = item.slug === category.slug;
-    const className = isActive ? ' class="is-active"' : "";
-    const ariaCurrent = isActive ? ' aria-current="page"' : "";
-    return `<a href="${getCategoryUrl(item.slug)}"${className}${ariaCurrent}>${escapeHTML(item.label)}</a>`;
-  }).join("");
-
   const footerLinks = [
-    ["tecnologia", "Tecnologia"],
+    ["tecnologia", "Tecnología"],
     ["hogar", "Hogar"],
     ["vestuario-mujer", "Moda mujer"],
     ["salud-belleza", "Belleza"],
@@ -228,13 +221,11 @@ function renderCategoryPageShell() {
           <span class="brand-wordmark"><span class="brand-merka">MERKA</span><span class="brand-latina">LATINA</span></span>
         </a>
 
-        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle>
+        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle>
           <i class="fa-solid fa-bars"></i>
         </button>
 
-        <nav class="primary-nav" id="primary-navigation" aria-label="Menu principal" data-navigation>
-          ${navLinks}
-        </nav>
+        <nav class="primary-nav" id="primary-navigation" aria-label="Menú principal" data-navigation></nav>
 
         <form class="header-search" role="search" aria-label="Buscar productos">
           <label class="sr-only" for="site-search">Buscar productos</label>
@@ -245,8 +236,8 @@ function renderCategoryPageShell() {
           </button>
         </form>
 
-        <div class="header-actions" aria-label="Acciones de usuario">
-          <span class="header-flag" aria-label="Colombia" title="Colombia">
+        <div class="header-actions" role="group" aria-label="Acciones de usuario">
+          <span class="header-flag" role="img" aria-label="Colombia" title="Colombia">
             <img src="https://flagcdn.com/w40/co.png" srcset="https://flagcdn.com/w80/co.png 2x" alt="Bandera de Colombia">
           </span>
           <a class="header-action" href="#" aria-label="Mi cuenta">
@@ -281,8 +272,8 @@ function renderCategoryPageShell() {
           <li class="trust-item">
             <i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
             <div>
-              <strong>Envio a toda Colombia</strong>
-              <span>2 a 5 dias habiles</span>
+              <strong>Envío a toda Colombia</strong>
+              <span>2 a 5 días hábiles</span>
             </div>
           </li>
           <li class="trust-item">
@@ -295,15 +286,15 @@ function renderCategoryPageShell() {
           <li class="trust-item">
             <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
             <div>
-              <strong>Garantia de cambio</strong>
-              <span>8 dias para devoluciones</span>
+              <strong>Garantía de cambio</strong>
+              <span>8 días para devoluciones</span>
             </div>
           </li>
           <li class="trust-item">
             <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
             <div>
               <strong>Soporte por WhatsApp</strong>
-              <span>Respuesta el mismo dia</span>
+              <span>Respuesta el mismo día</span>
             </div>
           </li>
         </ul>
@@ -316,7 +307,7 @@ function renderCategoryPageShell() {
         </div>
 
         <p class="products-empty" data-products-empty hidden>
-          No hay productos disponibles en esta categoria por ahora.
+          No hay productos disponibles en esta categoría por ahora.
         </p>
 
         <div class="product-grid" data-product-grid data-product-mode="category" data-category="${escapeHTML(category.slug)}">
@@ -327,7 +318,7 @@ function renderCategoryPageShell() {
       <section class="cta-band" id="carrito" aria-label="Contacto y novedades" data-reveal>
         <div class="cta-content">
           <h2>Recibe ofertas antes que nadie</h2>
-          <p>Escribenos por WhatsApp para asesoria personalizada o dejanos tu correo para enterarte de las promociones.</p>
+          <p>Escríbenos por WhatsApp para asesoría personalizada o déjanos tu correo para enterarte de las promociones.</p>
         </div>
         <div class="cta-actions">
           <a class="cta-whatsapp" href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener">
@@ -335,7 +326,7 @@ function renderCategoryPageShell() {
             Escribir por WhatsApp
           </a>
           <form class="cta-newsletter">
-            <label class="sr-only" for="newsletter-email">Correo electronico</label>
+            <label class="sr-only" for="newsletter-email">Correo electrónico</label>
             <input id="newsletter-email" type="email" placeholder="tu@correo.com" required>
             <button type="submit">Suscribirme</button>
           </form>
@@ -347,7 +338,7 @@ function renderCategoryPageShell() {
       <div class="footer-grid">
         <div class="footer-brand">
           <img class="brand-logo footer-logo" src="${resolveAssetPath("assets/images/icons/logo-transparent.png")}" alt="MerkaLatina Colombia">
-          <p>Marketplace colombiano de tecnologia, hogar, moda, belleza y deportes.</p>
+          <p>Marketplace colombiano de tecnología, hogar, moda, belleza y deportes.</p>
           <div class="footer-social">
             <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
@@ -356,13 +347,14 @@ function renderCategoryPageShell() {
           </div>
         </div>
 
-        <nav class="footer-column" aria-label="Categorias">
-          <h3>Categorias</h3>
+        <nav class="footer-column" aria-label="Categorías">
+          <h3>Categorías</h3>
           ${footerLinks}
         </nav>
 
         <nav class="footer-column" aria-label="Ayuda">
           <h3>Ayuda</h3>
+          <a href="${getBasePath()}pages/quienes-somos.html">Quiénes somos</a>
           <a href="#">Estado de mi pedido</a>
           <a href="#">Cambios y devoluciones</a>
           <a href="#">Medios de pago</a>
@@ -371,7 +363,7 @@ function renderCategoryPageShell() {
 
         <div class="footer-column">
           <h3>Pagos aceptados</h3>
-          <div class="footer-payments" aria-label="Metodos de pago aceptados">
+          <div class="footer-payments" role="img" aria-label="Métodos de pago aceptados">
             <i class="fa-brands fa-cc-visa" aria-hidden="true"></i>
             <i class="fa-brands fa-cc-mastercard" aria-hidden="true"></i>
             <i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i>
@@ -387,7 +379,7 @@ function renderCategoryPageShell() {
 
     <div class="cart-overlay" data-cart-overlay hidden></div>
 
-    <aside class="cart-drawer" data-cart-drawer aria-hidden="true" aria-label="Carrito de compras">
+    <aside class="cart-drawer" data-cart-drawer inert aria-label="Carrito de compras">
       <div class="cart-drawer-header">
         <h2><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i> Tu carrito</h2>
         <button type="button" class="cart-close" data-cart-close aria-label="Cerrar carrito">
@@ -398,7 +390,7 @@ function renderCategoryPageShell() {
       <div class="cart-drawer-body" data-cart-view>
         <ul class="cart-items" data-cart-items></ul>
         <p class="cart-empty" data-cart-empty hidden>
-          Tu carrito esta vacio. Explora las <a href="${getCategoryUrl("hogar")}" data-cart-close-link>categorias</a>.
+          Tu carrito está vacío. Explora las <a href="${getCategoryUrl("hogar")}" data-cart-close-link>categorías</a>.
         </p>
       </div>
 
@@ -423,16 +415,16 @@ function renderCategoryPageShell() {
           <input type="text" name="nombre" autocomplete="name" required>
         </label>
         <label class="checkout-field">
-          Telefono / WhatsApp
-          <input type="tel" name="telefono" autocomplete="tel" required>
+          Teléfono / WhatsApp
+          <input type="tel" name="telefono" autocomplete="tel" pattern="[0-9]{10}" maxlength="10" placeholder="3001234567" title="Ingresa 10 dígitos, sin espacios ni guiones" required>
         </label>
         <label class="checkout-field">
           Ciudad
           <input type="text" name="ciudad" autocomplete="address-level2" required>
         </label>
         <label class="checkout-field">
-          Direccion completa
-          <input type="text" name="direccion" autocomplete="street-address" required>
+          Dirección completa
+          <input type="text" name="direccion" autocomplete="address-line1" required>
         </label>
         <label class="checkout-field">
           Notas para la entrega (opcional)
@@ -440,7 +432,7 @@ function renderCategoryPageShell() {
         </label>
 
         <p class="checkout-note">
-          Pagas en efectivo cuando recibes tu pedido. Al enviar, se abrira WhatsApp con el resumen para confirmar.
+          Pagas en efectivo cuando recibes tu pedido. Al enviar, se abrirá WhatsApp con el resumen para confirmar.
         </p>
 
         <button type="submit" class="checkout-submit">
@@ -468,7 +460,7 @@ async function initProducts() {
   } catch (error) {
     grid.innerHTML = `
       <p class="products-loading">
-        No pudimos cargar el catalogo. Usa un servidor local o publica el sitio para permitir la carga de productos.json.
+        No pudimos cargar el catálogo. Usa un servidor local o publica el sitio para permitir la carga de productos.json.
       </p>
     `;
     console.error(error);
@@ -493,7 +485,7 @@ function selectProductsForCurrentPage(products, grid) {
 function renderProducts(grid, products) {
   if (!products.length) {
     grid.innerHTML = "";
-    setProductsEmpty(true, "No hay productos disponibles en esta categoria por ahora.");
+    setProductsEmpty(true, "No hay productos disponibles en esta categoría por ahora.");
     return;
   }
 
@@ -660,7 +652,7 @@ function applyProductSearch(query) {
   const normalizedQuery = normalizeText(query);
 
   if (!cards.length) {
-    setProductsEmpty(true, "No hay productos disponibles en esta categoria por ahora.");
+    setProductsEmpty(true, "No hay productos disponibles en esta categoría por ahora.");
     return false;
   }
 
@@ -681,7 +673,7 @@ function applyProductSearch(query) {
     if (matches) anyMatch = true;
   });
 
-  setProductsEmpty(!anyMatch, "No encontramos productos relacionados con tu busqueda.");
+  setProductsEmpty(!anyMatch, "No encontramos productos relacionados con tu búsqueda.");
   return anyMatch;
 }
 
@@ -705,6 +697,13 @@ function initCart() {
   const productGrid = document.querySelector("[data-product-grid]");
 
   if (!cartDrawer || !cartItemsEl) return;
+
+  const setDrawerA11yState = (isOpen) => {
+    cartDrawer.toggleAttribute("inert", !isOpen);
+    cartDrawer.setAttribute("aria-hidden", String(!isOpen));
+  };
+
+  setDrawerA11yState(false);
 
   const readCart = () => {
     try {
@@ -815,14 +814,14 @@ function initCart() {
     cartDrawer.classList.add("is-open");
     cartOverlay.hidden = false;
     requestAnimationFrame(() => cartOverlay.classList.add("is-visible"));
-    cartDrawer.setAttribute("aria-hidden", "false");
+    setDrawerA11yState(true);
     document.body.style.overflow = "hidden";
   };
 
   const closeDrawer = () => {
     cartDrawer.classList.remove("is-open");
     cartOverlay.classList.remove("is-visible");
-    cartDrawer.setAttribute("aria-hidden", "true");
+    setDrawerA11yState(false);
     document.body.style.overflow = "";
     showCartView();
     setTimeout(() => {
@@ -882,9 +881,9 @@ function initCart() {
       `Total: ${formatCOP(total)}`,
       "",
       `Nombre: ${nombre}`,
-      `Telefono: ${telefono}`,
+      `Teléfono: ${telefono}`,
       `Ciudad: ${ciudad}`,
-      `Direccion: ${direccion}`
+      `Dirección: ${direccion}`
     ];
 
     if (notas) lines.push(`Notas: ${notas}`);

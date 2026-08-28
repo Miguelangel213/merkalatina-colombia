@@ -17,7 +17,7 @@
     "oldPrice": 120000,
     "image": "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=700&q=80",
     "category": "hogar",
-    "description": "Organizador practico para aprovechar mejor cajones, repisas y espacios de cocina.",
+    "description": "Organizador práctico para aprovechar mejor cajones, repisas y espacios de cocina.",
     "whatsapp": "573001234567",
     "featured": true
   },
@@ -39,7 +39,7 @@
     "oldPrice": 120000,
     "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=700&q=80",
     "category": "salud-belleza",
-    "description": "Suplemento nutricional con acidos grasos Omega 3, 6 y 9.",
+    "description": "Suplemento nutricional con ácidos grasos Omega 3, 6 y 9.",
     "whatsapp": "573001234567",
     "featured": true
   },
@@ -50,17 +50,17 @@
     "oldPrice": 120000,
     "image": "https://images.unsplash.com/photo-1602928321679-560bb453f190?auto=format&fit=crop&w=700&q=80",
     "category": "salud-belleza",
-    "description": "Aceite de oregano concentrado de alta potencia 1500mg.",
+    "description": "Aceite de orégano concentrado de alta potencia 1500mg.",
     "whatsapp": "573001234567"
   },
   {
     "id": 6,
-    "name": "Set Didactico de Bloques",
+    "name": "Set Didáctico de Bloques",
     "price": 75000,
     "oldPrice": 95000,
     "image": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=700&q=80",
     "category": "infantil",
-    "description": "Juego de bloques para estimular creatividad, coordinacion y aprendizaje temprano.",
+    "description": "Juego de bloques para estimular creatividad, coordinación y aprendizaje temprano.",
     "whatsapp": "573001234567",
     "featured": true
   },
@@ -71,7 +71,7 @@
     "oldPrice": 105000,
     "image": "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=700&q=80",
     "category": "infantil",
-    "description": "Mochila comoda y resistente para colegio, viajes y salidas familiares.",
+    "description": "Mochila cómoda y resistente para colegio, viajes y salidas familiares.",
     "whatsapp": "573001234567"
   },
   {
@@ -81,7 +81,7 @@
     "oldPrice": 150000,
     "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=700&q=80",
     "category": "mascotas",
-    "description": "Cama acolchada para perros y gatos, facil de ubicar en cualquier espacio.",
+    "description": "Cama acolchada para perros y gatos, fácil de ubicar en cualquier espacio.",
     "whatsapp": "573001234567",
     "featured": true
   },
@@ -92,17 +92,17 @@
     "oldPrice": 115000,
     "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=700&q=80",
     "category": "mascotas",
-    "description": "Dispensador practico para mantener agua disponible durante el dia.",
+    "description": "Dispensador práctico para mantener agua disponible durante el día.",
     "whatsapp": "573001234567"
   },
   {
     "id": 10,
-    "name": "Audifonos Bluetooth Pro",
+    "name": "Audífonos Bluetooth Pro",
     "price": 140000,
     "oldPrice": 180000,
     "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=80",
     "category": "tecnologia",
-    "description": "Audifonos inalambricos con sonido claro para llamadas, musica y entretenimiento.",
+    "description": "Audífonos inalámbricos con sonido claro para llamadas, música y entretenimiento.",
     "whatsapp": "573001234567",
     "featured": true
   },
@@ -118,12 +118,12 @@
   },
   {
     "id": 12,
-    "name": "Camiseta Basica Hombre",
+    "name": "Camiseta Básica Hombre",
     "price": 70000,
     "oldPrice": 90000,
     "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80",
     "category": "vestuario-hombre",
-    "description": "Camiseta versatil para looks casuales, comoda y facil de combinar.",
+    "description": "Camiseta versátil para looks casuales, cómoda y fácil de combinar.",
     "whatsapp": "573001234567"
   },
   {
@@ -154,7 +154,7 @@
     "oldPrice": 110000,
     "image": "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=700&q=80",
     "category": "vestuario-mujer",
-    "description": "Blusa fresca y elegante para combinar con jeans, falda o pantalon.",
+    "description": "Blusa fresca y elegante para combinar con jeans, falda o pantalón.",
     "whatsapp": "573001234567"
   },
   {
@@ -164,7 +164,7 @@
     "oldPrice": 210000,
     "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80",
     "category": "calzado",
-    "description": "Tenis comodos para caminar, salir y combinar con ropa casual.",
+    "description": "Tenis cómodos para caminar, salir y combinar con ropa casual.",
     "whatsapp": "573001234567",
     "featured": true
   },
@@ -175,7 +175,7 @@
     "oldPrice": 125000,
     "image": "https://images.unsplash.com/photo-1562273138-f46be4ebdf33?auto=format&fit=crop&w=700&q=80",
     "category": "calzado",
-    "description": "Sandalias livianas para descanso, clima calido y uso diario.",
+    "description": "Sandalias livianas para descanso, clima cálido y uso diario.",
     "whatsapp": "573001234567"
   },
   {
@@ -190,7 +190,7 @@
   },
   {
     "id": 19,
-    "name": "Compresor de Aire Portatil",
+    "name": "Compresor de Aire Portátil",
     "price": 250000,
     "oldPrice": 310000,
     "image": "https://images.unsplash.com/photo-1537984822441-cff330075342?auto=format&fit=crop&w=700&q=80",
@@ -205,7 +205,7 @@
     "oldPrice": 350000,
     "image": "https://images.unsplash.com/photo-1585515320310-259814833e62?auto=format&fit=crop&w=700&q=80",
     "category": "electrodomesticos",
-    "description": "Freidora de aire para preparar comidas rapidas con menos aceite.",
+    "description": "Freidora de aire para preparar comidas rápidas con menos aceite.",
     "whatsapp": "573001234567"
   },
   {
@@ -215,12 +215,12 @@
     "oldPrice": 180000,
     "image": "https://images.unsplash.com/photo-1570222094114-d054a817e56b?auto=format&fit=crop&w=700&q=80",
     "category": "electrodomesticos",
-    "description": "Licuadora compacta para batidos, jugos y preparaciones rapidas.",
+    "description": "Licuadora compacta para batidos, jugos y preparaciones rápidas.",
     "whatsapp": "573001234567"
   },
   {
     "id": 22,
-    "name": "Bandas Elasticas de Entrenamiento",
+    "name": "Bandas Elásticas de Entrenamiento",
     "price": 70000,
     "oldPrice": 95000,
     "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=700&q=80",
@@ -240,12 +240,12 @@
   },
   {
     "id": 24,
-    "name": "Kit de Destornilladores de Precision",
+    "name": "Kit de Destornilladores de Precisión",
     "price": 95000,
     "oldPrice": 125000,
     "image": "https://images.unsplash.com/photo-1581147036324-c1c9a3c7c78d?auto=format&fit=crop&w=700&q=80",
     "category": "herramientas",
-    "description": "Kit compacto para reparaciones pequenas, tecnologia y mantenimiento del hogar.",
+    "description": "Kit compacto para reparaciones pequeñas, tecnología y mantenimiento del hogar.",
     "whatsapp": "573001234567"
   },
   {
@@ -255,7 +255,7 @@
     "oldPrice": 90000,
     "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=700&q=80",
     "category": "herramientas",
-    "description": "Linterna practica para emergencias, viajes, trabajo y uso domestico.",
+    "description": "Linterna práctica para emergencias, viajes, trabajo y uso doméstico.",
     "whatsapp": "573001234567"
   },
   {
@@ -275,7 +275,7 @@
     "oldPrice": 165000,
     "image": "https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&w=700&q=80",
     "category": "temporada",
-    "description": "Set practico para sorprender en fechas especiales con una presentacion cuidada.",
+    "description": "Set práctico para sorprender en fechas especiales con una presentación cuidada.",
     "whatsapp": "573001234567"
   }
 ]
