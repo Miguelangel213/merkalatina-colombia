@@ -1,932 +1,485 @@
-/**
- * MerkaLatina Colombia - script.js
- * Menu movil, header dinamico, carrusel, paginas de categoria, buscador y carrito.
- */
-
+/* MerkaLatina Colombia — sitio estático, catálogo y pedidos por WhatsApp. */
 const CATEGORY_DEFINITIONS = [
-  {
-    slug: "hogar",
-    label: "Hogar",
-    kicker: "Hogar y estilo",
-    title: "Todo para renovar tu hogar.",
-    description: "Soluciones prácticas para cocina, orden, decoración y bienestar en casa.",
-    image: "https://images.unsplash.com/photo-1484101403633-562f891dc89a?auto=format&fit=crop&w=1800&q=85"
-  },
-  {
-    slug: "salud-belleza",
-    label: "Salud y belleza",
-    kicker: "Cuidado diario",
-    title: "Bienestar, belleza y cuidado personal.",
-    description: "Productos seleccionados para verte bien, sentirte mejor y cuidar tu rutina.",
-    image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1800&q=85"
-  },
-  {
-    slug: "infantil",
-    label: "Infantil",
-    kicker: "Para los pequeños",
-    title: "Productos para niños y bebés.",
-    description: "Encuentra opciones prácticas para juego, cuidado, ropa y vida familiar.",
-    image: "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=1800&q=85"
-  },
-  {
-    slug: "mascotas",
-    label: "Mascotas",
-    kicker: "Amigos de casa",
-    title: "Accesorios y bienestar para mascotas.",
-    description: "Todo lo esencial para cuidar, consentir y acompañar a tus mascotas.",
-    image: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1800&q=85"
-  },
-  {
-    slug: "tecnologia",
-    label: "Tecnología",
-    kicker: "Tecnología premium",
-    title: "Tecnología para trabajar y disfrutar.",
-    description: "Dispositivos, accesorios y gadgets elegidos para tu día a día.",
-    image: "https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=1800&q=85"
-  },
-  {
-    slug: "vestuario-hombre",
-    label: "Vestuario hombre",
-    kicker: "Moda hombre",
-    title: "Prendas para todos los días.",
-    description: "Básicos, favoritos de temporada y piezas cómodas para vestir mejor.",
-    image: "https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?auto=format&fit=crop&w=1800&q=85"
-  },
-  {
-    slug: "vestuario-mujer",
-    label: "Vestuario mujer",
-    kicker: "Moda mujer",
-    title: "Estilo versátil para cada plan.",
-    description: "Ropa, accesorios y favoritos para construir looks con facilidad.",
-    image: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=1800&q=85"
-  },
-  {
-    slug: "calzado",
-    label: "Calzado",
-    kicker: "Pisadas con estilo",
-    title: "Calzado para moverte cómodo.",
-    description: "Opciones urbanas, casuales y deportivas para completar tu outfit.",
-    image: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=1800&q=85"
-  },
-  {
-    slug: "vehiculos",
-    label: "Vehículos",
-    kicker: "Movilidad y cuidado",
-    title: "Accesorios para vehículos.",
-    description: "Productos útiles para mantenimiento, viajes y comodidad en carretera.",
-    image: "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1800&q=85"
-  },
-  {
-    slug: "electrodomesticos",
-    label: "Electrodomésticos",
-    kicker: "Casa eficiente",
-    title: "Electrodomésticos para tu rutina.",
-    description: "Equipos y soluciones para ahorrar tiempo y hacer más fácil cada tarea.",
-    image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=1800&q=85"
-  },
-  {
-    slug: "deportes",
-    label: "Deportes",
-    kicker: "Entrena mejor",
-    title: "Equipo para moverte con energía.",
-    description: "Accesorios, ropa y productos para entrenar en casa o al aire libre.",
-    image: "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1800&q=85"
-  },
-  {
-    slug: "herramientas",
-    label: "Herramientas",
-    kicker: "Hazlo fácil",
-    title: "Herramientas para reparar y crear.",
-    description: "Aliados prácticos para arreglos, proyectos y mantenimiento del hogar.",
-    image: "https://images.unsplash.com/photo-1581147036324-c1c9a3c7c78d?auto=format&fit=crop&w=1800&q=85"
-  },
-  {
-    slug: "temporada",
-    label: "Temporada",
-    kicker: "Ofertas de temporada",
-    title: "Favoritos para el momento.",
-    description: "Productos destacados para fechas especiales, promociones y novedades.",
-    image: "https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?auto=format&fit=crop&w=1800&q=85"
-  }
+  { slug: "hogar", label: "Hogar", kicker: "Hogar y estilo", title: "Dale nuevas ideas a tu hogar.", description: "Soluciones prácticas para cocina, orden, decoración y bienestar en casa.", image: "assets/images/categories/hogar.jpg" },
+  { slug: "salud-belleza", label: "Salud y belleza", kicker: "Cuidado diario", title: "Un momento para cuidarte.", description: "Productos para tu rutina de bienestar, belleza y cuidado personal.", image: "assets/images/categories/salud-belleza.jpg" },
+  { slug: "infantil", label: "Infantil", kicker: "Para los pequeños", title: "Para jugar, crecer y descubrir.", description: "Opciones para niños y bebés, pensadas para la vida en familia.", image: "assets/images/categories/infantil.jpg" },
+  { slug: "mascotas", label: "Mascotas", kicker: "Amigos de casa", title: "Ellos también merecen lo mejor.", description: "Accesorios y productos para cuidar y consentir a tus mascotas.", image: "assets/images/categories/mascotas.jpg" },
+  { slug: "tecnologia", label: "Tecnología", kicker: "Conectado a lo que importa", title: "Tecnología para todos tus planes.", description: "Dispositivos, accesorios y gadgets para el trabajo y el tiempo libre.", image: "assets/images/categories/tecnologia.jpg" },
+  { slug: "vestuario-hombre", label: "Moda hombre", kicker: "Moda hombre", title: "Vístete para cada momento.", description: "Básicos y prendas cómodas para el estilo de todos los días.", image: "assets/images/categories/vestuario-hombre.jpg" },
+  { slug: "vestuario-mujer", label: "Moda mujer", kicker: "Moda mujer", title: "Tu estilo, todos los días.", description: "Prendas y accesorios versátiles para combinar a tu manera.", image: "assets/images/categories/vestuario-mujer.jpg" },
+  { slug: "calzado", label: "Calzado", kicker: "Cada paso cuenta", title: "Encuentra tu próximo par.", description: "Calzado casual, urbano y deportivo para moverte con comodidad.", image: "assets/images/categories/calzado.jpg" },
+  { slug: "vehiculos", label: "Vehículos", kicker: "Listo para salir", title: "Accesorios para el camino.", description: "Productos útiles para mantenimiento, viajes y comodidad en carretera.", image: "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1400&q=80" },
+  { slug: "electrodomesticos", label: "Electrodomésticos", kicker: "Rutinas más fáciles", title: "Tu casa, más práctica.", description: "Electrodomésticos para ahorrar tiempo en el día a día.", image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=1400&q=80" },
+  { slug: "deportes", label: "Deportes", kicker: "Activa tus planes", title: "Muévete a tu manera.", description: "Equipo y accesorios para entrenar dentro o fuera de casa.", image: "assets/images/categories/deportes.jpg" },
+  { slug: "herramientas", label: "Herramientas", kicker: "Manos a la obra", title: "Para reparar y crear.", description: "Herramientas útiles para tus proyectos y arreglos en casa.", image: "https://images.unsplash.com/photo-1581147036324-c1c9a3c7c78d?auto=format&fit=crop&w=1400&q=80" },
+  { slug: "temporada", label: "Temporada", kicker: "Para la ocasión", title: "Detalles para cada temporada.", description: "Ideas para celebraciones, fechas especiales y nuevos comienzos.", image: "https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?auto=format&fit=crop&w=1400&q=80" }
 ];
 
-const CATEGORY_BY_SLUG = new Map(
-  CATEGORY_DEFINITIONS.map((category) => [category.slug, category])
-);
-
-const CART_STORAGE_KEY = "merkalatina:cart";
+const CATEGORY_BY_SLUG = new Map(CATEGORY_DEFINITIONS.map((category) => [category.slug, category]));
+const FEATURED_CATEGORIES = ["hogar", "tecnologia", "vestuario-mujer", "salud-belleza", "deportes", "mascotas"];
 const WHATSAPP_NUMBER = "573044151020";
+const CART_STORAGE_KEY = "merkalatina:cart";
+const catalogState = { mode: "featured", query: "", sort: "default" };
+let catalogProducts = [];
+let cartMemory = null;
+let toastTimeout;
 
-document.addEventListener("DOMContentLoaded", () => {
-  renderCategoryPageShell();
-  initMobileMenu();
-  initHeaderScroll();
-  initHeroSwiper();
-  initSearch();
-  initScrollReveal();
-  initProducts().finally(() => {
-    initCart();
-  });
-});
-
-/* ------------------------------------------------------------------ */
-/* Utilidades generales                                                */
-/* ------------------------------------------------------------------ */
-function getBasePath() {
-  return document.body.dataset.basePath || "";
-}
-
-function getHomeUrl() {
-  return getBasePath() ? "../index.html" : "index.html";
-}
-
-function getCategoryUrl(slug) {
-  return getBasePath() ? `${slug}.html` : `pages/${slug}.html`;
-}
-
-function getCatalogUrl() {
-  return `${getBasePath()}data/productos.json`;
-}
-
+function getBasePath() { return document.body.dataset.basePath || ""; }
+function getHomeUrl() { return `${getBasePath()}index.html`; }
+function getAboutUrl() { return `${getBasePath()}pages/quienes-somos.html`; }
+function getCategoryUrl(slug) { return `${getBasePath()}pages/${slug}.html`; }
 function resolveAssetPath(path) {
   if (!path) return "";
-  if (/^(https?:)?\/\//.test(path) || path.startsWith("data:") || path.startsWith("/")) {
-    return path;
-  }
-  return `${getBasePath()}${path}`;
+  return /^(https?:)?\/\//.test(path) || path.startsWith("data:") || path.startsWith("/") ? path : `${getBasePath()}${path}`;
 }
-
-function getCategoryBySlug(slug) {
-  return CATEGORY_BY_SLUG.get(slug) || null;
-}
-
-function formatCOP(value) {
-  const amount = Number(value) || 0;
-  return `$ ${amount.toLocaleString("es-CO", { maximumFractionDigits: 0 })}`;
-}
-
-function normalizeText(value) {
-  return String(value || "")
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase();
-}
-
+function formatCOP(value) { return `$ ${Number(value).toLocaleString("es-CO", { maximumFractionDigits: 0 })}`; }
+function normalizeText(value) { return String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase(); }
 function escapeHTML(value) {
-  return String(value ?? "").replace(/[&<>"']/g, (character) => {
-    const entities = {
-      "&": "&amp;",
-      "<": "&lt;",
-      ">": "&gt;",
-      '"': "&quot;",
-      "'": "&#039;"
-    };
-    return entities[character];
-  });
+  return String(value ?? "").replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[char]);
+}
+function findProduct(id) { return catalogProducts.find((product) => String(product.id) === String(id)); }
+
+function renderHeader() {
+  const category = document.body.dataset.category || "";
+  const isHome = document.body.dataset.page === "home";
+  const navLink = (url, label, active = false) => `<a href="${url}"${active ? ' class="is-active" aria-current="page"' : ""}>${label}</a>`;
+  return `
+    <header class="site-header" data-header>
+      <div class="announcement"><div class="container announcement-inner"><span><i class="fa-solid fa-truck-fast" aria-hidden="true"></i> Envíos en Colombia · Pedidos por WhatsApp</span><a href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener noreferrer">¿Necesitas ayuda? <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></div>
+      <div class="container header-main">
+        <button class="menu-toggle" type="button" data-menu-toggle aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-navigation"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+        <a class="brand" href="${getHomeUrl()}" aria-label="MerkaLatina Colombia, ir al inicio"><img src="${resolveAssetPath("assets/images/icons/logo-small.png")}" width="38" height="56" alt=""><span class="brand-text"><strong>merka<span>latina</span></strong><small>COLOMBIA</small></span></a>
+        <form class="header-search" role="search" data-search-form><label class="sr-only" for="site-search">Buscar productos en toda la tienda</label><i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i><input id="site-search" name="q" type="search" placeholder="¿Qué estás buscando hoy?" maxlength="100" autocomplete="off"><button type="submit"><span>Buscar</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button></form>
+        <div class="header-actions"><a class="header-help" href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener noreferrer" aria-label="Ayuda por WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>Ayuda</span></a><button class="cart-trigger" type="button" data-cart-open aria-haspopup="dialog" aria-controls="cart-drawer" aria-label="Abrir carrito"><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i><span>Mi carrito</span><strong data-cart-count>0</strong></button></div>
+      </div>
+      <div class="header-nav-wrap"><nav class="container primary-nav" id="primary-navigation" aria-label="Navegación principal" data-navigation>
+        ${navLink(getHomeUrl(), "Inicio", isHome)}
+        ${navLink(`${getHomeUrl()}#categorias`, "Categorías")}
+        ${navLink(getCategoryUrl("tecnologia"), "Tecnología", category === "tecnologia")}
+        ${navLink(getCategoryUrl("hogar"), "Hogar", category === "hogar")}
+        ${navLink(getCategoryUrl("vestuario-mujer"), "Moda", category === "vestuario-mujer")}
+        ${navLink(getCategoryUrl("salud-belleza"), "Belleza", category === "salud-belleza")}
+        ${navLink(getCategoryUrl("deportes"), "Deportes", category === "deportes")}
+        ${navLink(getAboutUrl(), "Quiénes somos", document.body.dataset.page === "about")}
+      </nav></div>
+    </header>`;
 }
 
-function setProductsEmpty(isVisible, message) {
-  const emptyState = document.querySelector("[data-products-empty]");
-  if (!emptyState) return;
-  if (message) emptyState.textContent = message;
-  emptyState.hidden = !isVisible;
+function renderFooter() {
+  return `<footer class="site-footer"><div class="container footer-grid">
+    <div class="footer-intro"><a class="brand footer-brand" href="${getHomeUrl()}" aria-label="MerkaLatina Colombia, ir al inicio"><img src="${resolveAssetPath("assets/images/icons/logo-small.png")}" width="38" height="56" alt=""><span class="brand-text"><strong>merka<span>latina</span></strong><small>COLOMBIA</small></span></a><p>Productos para tu casa, tu estilo y tu día a día. Descubre, elige y confirma tu pedido con nosotros.</p></div>
+    <nav class="footer-column" aria-label="Explora"><h2>Explora</h2><a href="${getHomeUrl()}#productos">Todos los productos</a><a href="${getHomeUrl()}#categorias">Categorías</a><a href="${getCategoryUrl("tecnologia")}">Tecnología</a><a href="${getCategoryUrl("hogar")}">Hogar</a><a href="${getCategoryUrl("vestuario-mujer")}">Moda mujer</a></nav>
+    <nav class="footer-column" aria-label="MerkaLatina"><h2>MerkaLatina</h2><a href="${getAboutUrl()}">Quiénes somos</a><a href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a><a href="${getHomeUrl()}#como-comprar">Cómo comprar</a></nav>
+    <div class="footer-column footer-contact"><h2>Compra con tranquilidad</h2><p>Tu pedido se prepara por WhatsApp. Confirmamos contigo disponibilidad, entrega y pago antes de finalizar.</p><a href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Escríbenos</a></div>
+    </div><div class="footer-bottom"><div class="container"><span>© 2026 MerkaLatina Colombia</span><span>Hecho para comprar a tu manera.</span></div></div></footer>`;
 }
 
-/* ------------------------------------------------------------------ */
-/* Shell reutilizable para paginas de categoria                         */
-/* ------------------------------------------------------------------ */
+function renderCartShell() {
+  return `<div class="cart-overlay" data-cart-overlay hidden></div>
+    <aside class="cart-drawer" id="cart-drawer" data-cart-drawer role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true" inert>
+      <div class="cart-drawer-header"><div><small>MERKALATINA COLOMBIA</small><h2 id="cart-title">Tu carrito <span data-cart-title-count>(0)</span></h2></div><button class="icon-button" type="button" data-cart-close aria-label="Cerrar carrito"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button></div>
+      <div class="cart-drawer-body" data-cart-view><div class="cart-empty" data-cart-empty hidden><span class="cart-empty-icon"><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></span><h3>Tu carrito está esperando</h3><p>Explora el catálogo y agrega los productos que te gusten.</p><a class="button button-primary" href="${getHomeUrl()}#productos" data-cart-close-link>Ver productos</a></div><ul class="cart-items" data-cart-items></ul></div>
+      <div class="cart-drawer-footer" data-cart-footer hidden><div class="cart-total-row"><span>Subtotal estimado</span><strong data-cart-total>$ 0</strong></div><p>Envío y disponibilidad por confirmar por WhatsApp.</p><button class="button button-primary cart-checkout-btn" type="button" data-open-checkout>Continuar pedido <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button></div>
+      <form class="checkout-form" data-checkout-form hidden><button class="checkout-back" type="button" data-checkout-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Volver al carrito</button><h3>Datos para tu pedido</h3><p class="checkout-intro">Solo usaremos estos datos para preparar el mensaje que enviarás por WhatsApp.</p>
+        <label class="checkout-field">Nombre completo <input name="nombre" type="text" autocomplete="name" maxlength="80" required placeholder="Tu nombre"></label>
+        <label class="checkout-field">Teléfono / WhatsApp <input name="telefono" type="tel" autocomplete="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" title="Ingresa 10 dígitos, sin espacios ni guiones" placeholder="3001234567" required></label>
+        <label class="checkout-field">Ciudad <input name="ciudad" type="text" autocomplete="address-level2" maxlength="80" required placeholder="Tu ciudad"></label>
+        <label class="checkout-field">Dirección de entrega <input name="direccion" type="text" autocomplete="street-address" maxlength="150" required placeholder="Calle, número y detalles"></label>
+        <label class="checkout-field">Notas (opcional) <textarea name="notas" rows="2" maxlength="300" placeholder="Algo que debamos saber"></textarea></label>
+        <p class="checkout-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Tu pedido no se envía automáticamente: se abrirá WhatsApp para que lo revises y lo confirmes. Tu carrito se conservará.</p>
+        <button class="button button-primary checkout-submit" type="submit"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Abrir pedido en WhatsApp</button><a class="checkout-fallback" href="#" data-checkout-fallback target="_blank" rel="noopener noreferrer" hidden>¿No se abrió WhatsApp? Toca aquí</a>
+      </form>
+    </aside>
+    <dialog class="product-dialog" data-product-dialog aria-labelledby="dialog-title"><button class="icon-button dialog-close" type="button" data-dialog-close aria-label="Cerrar detalles"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button><div data-dialog-content></div></dialog>
+    <div class="toast" data-toast role="status" aria-live="polite" hidden></div>`;
+}
+
 function renderCategoryPageShell() {
   const mount = document.querySelector("[data-category-shell]");
   if (!mount) return;
-
-  const slug = document.body.dataset.category || "hogar";
-  const category = getCategoryBySlug(slug) || CATEGORY_DEFINITIONS[0];
-  const footerLinks = [
-    ["tecnologia", "Tecnología"],
-    ["hogar", "Hogar"],
-    ["vestuario-mujer", "Moda mujer"],
-    ["salud-belleza", "Belleza"],
-    ["deportes", "Deportes"]
-  ].map(([linkSlug, label]) => (
-    `<a href="${getCategoryUrl(linkSlug)}">${label}</a>`
-  )).join("");
-
+  const category = CATEGORY_BY_SLUG.get(document.body.dataset.category) || CATEGORY_DEFINITIONS[0];
   document.title = `${category.label} | MerkaLatina Colombia`;
-
-  mount.innerHTML = `
-    <header class="site-header" data-header>
-      <div class="header-main">
-        <a class="brand" href="${getHomeUrl()}" aria-label="Ir al inicio de MerkaLatina Colombia">
-          <img class="brand-logo" src="${resolveAssetPath("assets/images/icons/logo-transparent.png")}" alt="MerkaLatina Colombia">
-          <span class="brand-wordmark"><span class="brand-merka">MERKA</span><span class="brand-latina">LATINA</span></span>
-        </a>
-
-        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle>
-          <i class="fa-solid fa-bars"></i>
-        </button>
-
-        <nav class="primary-nav" id="primary-navigation" aria-label="Menú principal" data-navigation></nav>
-
-        <form class="header-search" role="search" aria-label="Buscar productos">
-          <label class="sr-only" for="site-search">Buscar productos</label>
-          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-          <input id="site-search" type="search" placeholder="Buscar en ${escapeHTML(category.label)}">
-          <button type="submit" aria-label="Buscar">
-            <i class="fa-solid fa-arrow-right"></i>
-          </button>
-        </form>
-
-        <div class="header-actions" role="group" aria-label="Acciones de usuario">
-          <span class="header-flag" role="img" aria-label="Colombia" title="Colombia">
-            <img src="https://flagcdn.com/w40/co.png" srcset="https://flagcdn.com/w80/co.png 2x" alt="Bandera de Colombia">
-          </span>
-          <a class="header-action" href="#" aria-label="Mi cuenta">
-            <img class="action-icon" src="${resolveAssetPath("assets/images/icons/hero1.png")}" alt="">
-            <span>Cuenta</span>
-          </a>
-          <button type="button" class="header-action cart-action" data-cart-open aria-label="Abrir carrito de compras" aria-haspopup="dialog">
-            <img class="action-icon" src="${resolveAssetPath("assets/images/icons/hero2.png")}" alt="">
-            <span>Carrito</span>
-            <strong data-cart-count>0</strong>
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <main class="category-main">
-      <section class="category-hero" style="background-image: url('${category.image}')" aria-label="${escapeHTML(category.label)}">
-        <div class="category-hero-overlay"></div>
-        <div class="category-hero-content">
-          <span class="hero-kicker">${escapeHTML(category.kicker)}</span>
-          <h1>${escapeHTML(category.title)}</h1>
-          <p>${escapeHTML(category.description)}</p>
-          <a class="hero-button" href="#catalogo">
-            Ver productos
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-      </section>
-
-      <section class="trust-strip" aria-label="Beneficios de comprar en MerkaLatina">
-        <ul class="trust-list">
-          <li class="trust-item">
-            <i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
-            <div>
-              <strong>Envío a toda Colombia</strong>
-              <span>2 a 5 días hábiles</span>
-            </div>
-          </li>
-          <li class="trust-item">
-            <i class="fa-solid fa-hand-holding-dollar" aria-hidden="true"></i>
-            <div>
-              <strong>Pago contra entrega</strong>
-              <span>Paga cuando recibes</span>
-            </div>
-          </li>
-          <li class="trust-item">
-            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
-            <div>
-              <strong>Garantía de cambio</strong>
-              <span>8 días para devoluciones</span>
-            </div>
-          </li>
-          <li class="trust-item">
-            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-            <div>
-              <strong>Soporte por WhatsApp</strong>
-              <span>Respuesta el mismo día</span>
-            </div>
-          </li>
-        </ul>
-      </section>
-
-      <section class="products category-products" id="catalogo" aria-label="Productos de ${escapeHTML(category.label)}" data-product-section data-reveal>
-        <div class="section-heading">
-          <span class="section-kicker">${escapeHTML(category.label)}</span>
-          <h2>Productos de ${escapeHTML(category.label)}</h2>
-        </div>
-
-        <p class="products-empty" data-products-empty hidden>
-          No hay productos disponibles en esta categoría por ahora.
-        </p>
-
-        <div class="product-grid" data-product-grid data-product-mode="category" data-category="${escapeHTML(category.slug)}">
-          <p class="products-loading" data-products-loading>Cargando productos...</p>
-        </div>
-      </section>
-
-      <section class="cta-band" id="carrito" aria-label="Contacto y novedades" data-reveal>
-        <div class="cta-content">
-          <h2>Recibe ofertas antes que nadie</h2>
-          <p>Escríbenos por WhatsApp para asesoría personalizada o déjanos tu correo para enterarte de las promociones.</p>
-        </div>
-        <div class="cta-actions">
-          <a class="cta-whatsapp" href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener">
-            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-            Escribir por WhatsApp
-          </a>
-          <form class="cta-newsletter">
-            <label class="sr-only" for="newsletter-email">Correo electrónico</label>
-            <input id="newsletter-email" type="email" placeholder="tu@correo.com" required>
-            <button type="submit">Suscribirme</button>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <img class="brand-logo footer-logo" src="${resolveAssetPath("assets/images/icons/logo-transparent.png")}" alt="MerkaLatina Colombia">
-          <p>Marketplace colombiano de tecnología, hogar, moda, belleza y deportes.</p>
-          <div class="footer-social">
-            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://wa.me/${WHATSAPP_NUMBER}" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-          </div>
-        </div>
-
-        <nav class="footer-column" aria-label="Categorías">
-          <h3>Categorías</h3>
-          ${footerLinks}
-        </nav>
-
-        <nav class="footer-column" aria-label="Ayuda">
-          <h3>Ayuda</h3>
-          <a href="${getBasePath()}pages/quienes-somos.html">Quiénes somos</a>
-          <a href="#">Estado de mi pedido</a>
-          <a href="#">Cambios y devoluciones</a>
-          <a href="#">Medios de pago</a>
-          <a href="#">Preguntas frecuentes</a>
-        </nav>
-
-        <div class="footer-column">
-          <h3>Pagos aceptados</h3>
-          <div class="footer-payments" role="img" aria-label="Métodos de pago aceptados">
-            <i class="fa-brands fa-cc-visa" aria-hidden="true"></i>
-            <i class="fa-brands fa-cc-mastercard" aria-hidden="true"></i>
-            <i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i>
-            <i class="fa-solid fa-truck" aria-hidden="true"></i>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2026 MerkaLatina Colombia. Todos los derechos reservados.</p>
-      </div>
-    </footer>
-
-    <div class="cart-overlay" data-cart-overlay hidden></div>
-
-    <aside class="cart-drawer" data-cart-drawer inert aria-label="Carrito de compras">
-      <div class="cart-drawer-header">
-        <h2><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i> Tu carrito</h2>
-        <button type="button" class="cart-close" data-cart-close aria-label="Cerrar carrito">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
-
-      <div class="cart-drawer-body" data-cart-view>
-        <ul class="cart-items" data-cart-items></ul>
-        <p class="cart-empty" data-cart-empty hidden>
-          Tu carrito está vacío. Explora las <a href="${getCategoryUrl("hogar")}" data-cart-close-link>categorías</a>.
-        </p>
-      </div>
-
-      <div class="cart-drawer-footer" data-cart-footer hidden>
-        <div class="cart-total-row">
-          <span>Total</span>
-          <strong data-cart-total>$ 0</strong>
-        </div>
-        <button type="button" class="cart-checkout-btn" data-open-checkout>
-          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Finalizar por WhatsApp
-        </button>
-      </div>
-
-      <form class="checkout-form" data-checkout-form hidden novalidate>
-        <button type="button" class="checkout-back" data-checkout-back>
-          <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Volver al carrito
-        </button>
-        <h3>Datos de entrega</h3>
-
-        <label class="checkout-field">
-          Nombre completo
-          <input type="text" name="nombre" autocomplete="name" required>
-        </label>
-        <label class="checkout-field">
-          Teléfono / WhatsApp
-          <input type="tel" name="telefono" autocomplete="tel" pattern="[0-9]{10}" maxlength="10" placeholder="3001234567" title="Ingresa 10 dígitos, sin espacios ni guiones" required>
-        </label>
-        <label class="checkout-field">
-          Ciudad
-          <input type="text" name="ciudad" autocomplete="address-level2" required>
-        </label>
-        <label class="checkout-field">
-          Dirección completa
-          <input type="text" name="direccion" autocomplete="address-line1" required>
-        </label>
-        <label class="checkout-field">
-          Notas para la entrega (opcional)
-          <textarea name="notas" rows="2"></textarea>
-        </label>
-
-        <p class="checkout-note">
-          Pagas en efectivo cuando recibes tu pedido. Al enviar, se abrirá WhatsApp con el resumen para confirmar.
-        </p>
-
-        <button type="submit" class="checkout-submit">
-          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Enviar pedido por WhatsApp
-        </button>
-      </form>
-    </aside>
-  `;
+  mount.innerHTML = `<div data-site-header></div><main id="contenido" class="category-main">
+    <section class="collection-hero" aria-labelledby="collection-title"><img class="collection-hero-image" src="${escapeHTML(resolveAssetPath(category.image))}" alt="" width="1400" height="700"><div class="container collection-hero-content"><nav class="breadcrumbs breadcrumbs-light" aria-label="Ruta de navegación"><a href="${getHomeUrl()}">Inicio</a><i class="fa-solid fa-chevron-right" aria-hidden="true"></i><span aria-current="page">${escapeHTML(category.label)}</span></nav><span class="eyebrow">COLECCIÓN / ${escapeHTML(category.kicker)}</span><h1 id="collection-title">${escapeHTML(category.title)}</h1><p>${escapeHTML(category.description)}</p><a class="button button-light" href="#catalogo">Ver productos <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a></div></section>
+    <section class="benefits" aria-label="Así compras en MerkaLatina"><div class="container benefits-grid"><div class="benefit"><span class="benefit-icon"><i class="fa-solid fa-truck-fast" aria-hidden="true"></i></span><div><strong>Envíos en Colombia</strong><span>Consulta cobertura para tu ciudad</span></div></div><div class="benefit"><span class="benefit-icon"><i class="fa-solid fa-hand-holding-dollar" aria-hidden="true"></i></span><div><strong>Pago contra entrega</strong><span>Confirma los detalles al pedir</span></div></div><div class="benefit"><span class="benefit-icon"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></span><div><strong>Atención cercana</strong><span>Resolvemos tus dudas por WhatsApp</span></div></div></div></section>
+    <section class="section catalog-section category-products" id="catalogo" aria-labelledby="category-products-title" data-product-section><div class="container"><div class="section-header"><div><span class="eyebrow">PARA TI</span><h2 id="category-products-title">${escapeHTML(category.label)}<span class="heading-accent">.</span></h2><p>Elige tus favoritos y agrégalos al carrito.</p></div><a class="section-link" href="${getHomeUrl()}#categorias">Otras categorías <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div><div class="catalog-toolbar catalog-toolbar-category"><label class="sort-control" for="catalog-sort">Ordenar por <select id="catalog-sort" data-product-sort><option value="default">Destacados</option><option value="price-asc">Menor precio</option><option value="price-desc">Mayor precio</option><option value="name">Nombre A-Z</option></select></label></div><div class="catalog-meta"><p data-results-label role="status" aria-live="polite">Cargando productos…</p></div><div class="product-grid" data-product-grid data-product-mode="category" data-category="${escapeHTML(category.slug)}"><p class="products-loading">Cargando productos…</p></div></div></section>
+    <section class="section more-collections"><div class="container"><div class="section-header"><div><span class="eyebrow">SIGUE EXPLORANDO</span><h2>También te puede gustar<span class="heading-accent">.</span></h2></div></div><div class="category-more-links" data-other-collections></div></div></section>
+    <section class="contact-band container" aria-labelledby="contact-title"><div class="contact-decor" aria-hidden="true"><i class="fa-brands fa-whatsapp"></i></div><div><span class="eyebrow">ESTAMOS PARA AYUDARTE</span><h2 id="contact-title">¿Alguna pregunta sobre un producto?</h2><p>Escríbenos y te ayudamos a confirmar todos los detalles.</p></div><a class="button button-light" href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Hablar por WhatsApp</a></section>
+  </main><div data-site-footer></div><div data-cart-shell></div>`;
 }
 
-/* ------------------------------------------------------------------ */
-/* Catalogo de productos                                               */
-/* ------------------------------------------------------------------ */
-async function initProducts() {
-  const grid = document.querySelector("[data-product-grid]");
-  if (!grid) return;
-
-  try {
-    const response = await fetch(getCatalogUrl());
-    if (!response.ok) throw new Error("No se pudo cargar el catalogo");
-
-    const products = await response.json();
-    const selectedProducts = selectProductsForCurrentPage(products, grid);
-    renderProducts(grid, selectedProducts);
-  } catch (error) {
-    grid.innerHTML = `
-      <p class="products-loading">
-        No pudimos cargar el catálogo. Usa un servidor local o publica el sitio para permitir la carga de productos.json.
-      </p>
-    `;
-    console.error(error);
-  }
+function renderSharedShells() {
+  const header = document.querySelector("[data-site-header]");
+  const footer = document.querySelector("[data-site-footer]");
+  const cart = document.querySelector("[data-cart-shell]");
+  if (header) header.innerHTML = renderHeader();
+  if (footer) footer.innerHTML = renderFooter();
+  if (cart) cart.innerHTML = renderCartShell();
 }
 
-function selectProductsForCurrentPage(products, grid) {
-  const mode = grid.dataset.productMode || "recommended";
-  const category = grid.dataset.category || document.body.dataset.category || "";
-
-  if (mode === "category" && category) {
-    return products.filter((product) => product.category === category);
-  }
-
-  const recommended = products.filter(
-    (product) => product.featured === true || product.recommended === true
-  );
-
-  return (recommended.length ? recommended : products).slice(0, 8);
+function renderCategories() {
+  const featured = document.querySelector("[data-featured-categories]");
+  const more = document.querySelector("[data-more-categories]");
+  if (featured) featured.innerHTML = FEATURED_CATEGORIES.map((slug) => {
+    const category = CATEGORY_BY_SLUG.get(slug);
+    return `<a class="category-card" href="${getCategoryUrl(slug)}"><img src="${escapeHTML(resolveAssetPath(category.image.replace("w=1400", "w=700")))}" alt="" loading="lazy" width="420" height="500"><span class="category-card-content"><small>${escapeHTML(category.kicker)}</small><strong>${escapeHTML(category.label)}</strong></span><span class="category-card-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>`;
+  }).join("");
+  if (more) more.innerHTML = CATEGORY_DEFINITIONS.filter((category) => !FEATURED_CATEGORIES.includes(category.slug)).map((category) => `<a href="${getCategoryUrl(category.slug)}">${escapeHTML(category.label)} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>`).join("");
+  const other = document.querySelector("[data-other-collections]");
+  if (other) other.innerHTML = CATEGORY_DEFINITIONS.filter((category) => category.slug !== document.body.dataset.category).slice(0, 8).map((category) => `<a href="${getCategoryUrl(category.slug)}">${escapeHTML(category.label)} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>`).join("");
 }
 
-function renderProducts(grid, products) {
-  if (!products.length) {
-    grid.innerHTML = "";
-    setProductsEmpty(true, "No hay productos disponibles en esta categoría por ahora.");
-    return;
-  }
-
-  setProductsEmpty(false);
-
-  grid.innerHTML = products
-    .map((product) => {
-      const category = getCategoryBySlug(product.category);
-      const categoryLabel = category?.label || product.category || "";
-      const badgeText = product.badge || (product.oldPrice ? "Oferta" : "");
-      const badgeHtml = badgeText
-        ? `<span class="product-badge${badgeText.includes("%") ? " product-badge-offer" : ""}">${escapeHTML(badgeText)}</span>`
-        : "";
-      const searchText = [
-        product.name,
-        product.description,
-        categoryLabel
-      ].filter(Boolean).join(" ");
-
-      return `
-        <article class="product-card" data-product-name="${escapeHTML(product.name)}" data-product-price="${Number(product.price) || 0}" data-product-category="${escapeHTML(product.category || "")}" data-product-search="${escapeHTML(searchText)}">
-          ${badgeHtml}
-          <img src="${escapeHTML(resolveAssetPath(product.image))}" alt="${escapeHTML(product.name)}" loading="lazy">
-          <div class="product-body">
-            <h3>${escapeHTML(product.name)}</h3>
-            <p class="product-price">${formatCOP(product.price)}</p>
-            <button type="button" class="product-add" data-add-to-cart>Agregar al carrito</button>
-          </div>
-        </article>
-      `;
-    })
-    .join("");
-
-  const searchInput = document.getElementById("site-search");
-  const currentQuery = searchInput?.value.trim();
-  if (currentQuery) applyProductSearch(currentQuery);
-}
-
-/* ------------------------------------------------------------------ */
-/* Menu movil                                                          */
-/* ------------------------------------------------------------------ */
-function initMobileMenu() {
-  const menuToggle = document.querySelector("[data-menu-toggle]");
-  const navigation = document.querySelector("[data-navigation]");
-  if (!menuToggle || !navigation) return;
-
-  const icon = menuToggle.querySelector("i");
-
-  const setOpen = (isOpen) => {
-    navigation.classList.toggle("is-open", isOpen);
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
-    if (icon) {
-      icon.classList.toggle("fa-bars", !isOpen);
-      icon.classList.toggle("fa-xmark", isOpen);
-    }
+function initNavigation() {
+  const toggle = document.querySelector("[data-menu-toggle]");
+  const nav = document.querySelector("[data-navigation]");
+  if (!toggle || !nav) return;
+  const setOpen = (open) => {
+    nav.classList.toggle("is-open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+    toggle.querySelector("i").className = open ? "fa-solid fa-xmark" : "fa-solid fa-bars";
   };
-
-  menuToggle.addEventListener("click", (event) => {
-    event.stopPropagation();
-    setOpen(!navigation.classList.contains("is-open"));
-  });
-
-  navigation.addEventListener("click", (event) => {
-    if (event.target.closest("a")) setOpen(false);
-  });
-
-  document.addEventListener("click", (event) => {
-    const clickedInside = navigation.contains(event.target) || menuToggle.contains(event.target);
-    if (!clickedInside) setOpen(false);
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") setOpen(false);
-  });
-
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 1120) setOpen(false);
-  });
+  toggle.addEventListener("click", () => setOpen(toggle.getAttribute("aria-expanded") !== "true"));
+  nav.addEventListener("click", (event) => { if (event.target.closest("a")) setOpen(false); });
+  document.addEventListener("click", (event) => { if (!nav.contains(event.target) && !toggle.contains(event.target)) setOpen(false); });
+  document.addEventListener("keydown", (event) => { if (event.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") { setOpen(false); toggle.focus(); } });
+  window.addEventListener("resize", () => { if (window.innerWidth > 800) setOpen(false); });
 }
 
-/* ------------------------------------------------------------------ */
-/* Header que cambia de estilo al hacer scroll                         */
-/* ------------------------------------------------------------------ */
-function initHeaderScroll() {
-  const header = document.querySelector("[data-header]");
-  if (!header) return;
-
-  let ticking = false;
-
-  const updateHeaderState = () => {
-    header.classList.toggle("is-scrolled", window.scrollY > 80);
-    ticking = false;
-  };
-
-  const requestTick = () => {
-    if (!ticking) {
-      requestAnimationFrame(updateHeaderState);
-      ticking = true;
-    }
-  };
-
-  updateHeaderState();
-  window.addEventListener("scroll", requestTick, { passive: true });
-}
-
-/* ------------------------------------------------------------------ */
-/* Carrusel principal (Swiper)                                         */
-/* ------------------------------------------------------------------ */
-function initHeroSwiper() {
-  const heroSwiperElement = document.querySelector("[data-hero-swiper]");
-  if (!heroSwiperElement || typeof window.Swiper === "undefined") return;
-
-  new Swiper(heroSwiperElement, {
-    loop: true,
-    speed: 850,
-    effect: "slide",
-    autoplay: {
-      delay: 4200,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true
-    },
-    navigation: {
-      nextEl: ".hero-nav-next",
-      prevEl: ".hero-nav-prev"
-    },
-    keyboard: {
-      enabled: true
-    },
-    a11y: {
-      enabled: true,
-      prevSlideMessage: "Banner anterior",
-      nextSlideMessage: "Banner siguiente"
-    }
-  });
-}
-
-/* ------------------------------------------------------------------ */
-/* Buscador del header                                                  */
-/* ------------------------------------------------------------------ */
 function initSearch() {
-  const form = document.querySelector(".header-search");
+  const form = document.querySelector("[data-search-form]");
   const input = document.getElementById("site-search");
   if (!form || !input) return;
-
+  const initialQuery = new URLSearchParams(window.location.search).get("q");
+  if (document.body.dataset.page === "home" && initialQuery) {
+    catalogState.query = initialQuery.trim().slice(0, 100);
+    catalogState.mode = "all";
+    input.value = catalogState.query;
+  }
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    applyProductSearch(input.value.trim());
-    document
-      .querySelector("[data-product-section]")
-      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    const query = input.value.trim();
+    if (!query) { input.focus(); return; }
+    if (document.body.dataset.page !== "home") {
+      window.location.href = `${getHomeUrl()}?q=${encodeURIComponent(query)}#productos`;
+      return;
+    }
+    catalogState.query = query;
+    catalogState.mode = "all";
+    updateSearchUrl(query);
+    renderCatalog();
+    document.querySelector("[data-product-section]")?.scrollIntoView({ behavior: "smooth", block: "start" });
   });
-
-  input.addEventListener("input", () => {
-    if (!input.value.trim()) applyProductSearch("");
-  });
+  input.addEventListener("search", () => { if (!input.value && catalogState.query) clearSearch(); });
+  input.addEventListener("input", () => { if (!input.value && catalogState.query) clearSearch(); });
+  document.querySelector("[data-clear-search]")?.addEventListener("click", () => { clearSearch(); input.focus(); });
 }
 
-function applyProductSearch(query) {
-  const cards = document.querySelectorAll("[data-product-name]");
-  const normalizedQuery = normalizeText(query);
+function updateSearchUrl(query) {
+  const url = new URL(window.location.href);
+  if (query) url.searchParams.set("q", query);
+  else url.searchParams.delete("q");
+  window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+}
+function clearSearch() {
+  catalogState.query = "";
+  catalogState.mode = "featured";
+  const input = document.getElementById("site-search");
+  if (input) input.value = "";
+  updateSearchUrl("");
+  renderCatalog();
+}
 
-  if (!cards.length) {
-    setProductsEmpty(true, "No hay productos disponibles en esta categoría por ahora.");
-    return false;
-  }
-
-  if (!normalizedQuery) {
-    cards.forEach((card) => {
-      card.style.display = "";
+function initCatalogControls() {
+  const filters = document.querySelector("[data-category-filters]");
+  if (filters) {
+    const options = [{ slug: "featured", label: "Destacados" }, { slug: "all", label: "Todos" }, ...CATEGORY_DEFINITIONS];
+    filters.innerHTML = options.map((option) => `<button class="filter-chip" type="button" data-filter="${option.slug}" aria-pressed="false">${escapeHTML(option.label)}</button>`).join("");
+    filters.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-filter]");
+      if (!button) return;
+      if (catalogState.query) { catalogState.query = ""; document.getElementById("site-search").value = ""; updateSearchUrl(""); }
+      catalogState.mode = button.dataset.filter;
+      renderCatalog();
     });
-    setProductsEmpty(false);
-    return true;
   }
-
-  let anyMatch = false;
-
-  cards.forEach((card) => {
-    const text = normalizeText(card.dataset.productSearch || card.dataset.productName);
-    const matches = text.includes(normalizedQuery);
-    card.style.display = matches ? "" : "none";
-    if (matches) anyMatch = true;
+  document.querySelector("[data-product-sort]")?.addEventListener("change", (event) => { catalogState.sort = event.target.value; renderCatalog(); });
+  document.querySelector("[data-show-all]")?.addEventListener("click", () => { catalogState.mode = "all"; renderCatalog(); });
+  document.addEventListener("click", (event) => {
+    if (event.target.closest("[data-reset-filters]")) {
+      if (catalogState.query) { catalogState.query = ""; document.getElementById("site-search").value = ""; updateSearchUrl(""); }
+      catalogState.mode = "all"; renderCatalog();
+    }
+    if (event.target.closest("[data-retry-catalog]")) loadProducts();
   });
-
-  setProductsEmpty(!anyMatch, "No encontramos productos relacionados con tu búsqueda.");
-  return anyMatch;
 }
 
-/* ------------------------------------------------------------------ */
-/* Carrito de compras                                                   */
-/* ------------------------------------------------------------------ */
-function initCart() {
-  const cartCountEl = document.querySelector("[data-cart-count]");
-  const cartOpenBtn = document.querySelector("[data-cart-open]");
-  const cartCloseBtn = document.querySelector("[data-cart-close]");
-  const cartOverlay = document.querySelector("[data-cart-overlay]");
-  const cartDrawer = document.querySelector("[data-cart-drawer]");
-  const cartItemsEl = document.querySelector("[data-cart-items]");
-  const cartEmptyEl = document.querySelector("[data-cart-empty]");
-  const cartFooterEl = document.querySelector("[data-cart-footer]");
-  const cartTotalEl = document.querySelector("[data-cart-total]");
-  const openCheckoutBtn = document.querySelector("[data-open-checkout]");
-  const checkoutForm = document.querySelector("[data-checkout-form]");
-  const checkoutBackBtn = document.querySelector("[data-checkout-back]");
-  const cartView = document.querySelector("[data-cart-view]");
-  const productGrid = document.querySelector("[data-product-grid]");
+async function loadProducts() {
+  const grid = document.querySelector("[data-product-grid]");
+  if (!grid) return;
+  try {
+    const response = await fetch(`${getBasePath()}data/productos.json`);
+    if (!response.ok) throw new Error(`Error HTTP ${response.status}`);
+    const products = await response.json();
+    if (!Array.isArray(products)) throw new Error("El catálogo no es una lista");
+    catalogProducts = products.filter((product) => product.id != null && typeof product.name === "string" && Number.isFinite(Number(product.price)) && Number(product.price) >= 0 && CATEGORY_BY_SLUG.has(product.category));
+    renderCatalog();
+    renderCart(); // Actualiza precios y nombres del carrito con el catálogo vigente.
+  } catch (error) {
+    console.error("No se pudo cargar el catálogo:", error);
+    const label = document.querySelector("[data-results-label]");
+    if (label) label.textContent = "No se pudo cargar el catálogo.";
+    grid.innerHTML = `<div class="empty-state"><i class="fa-solid fa-wifi" aria-hidden="true"></i><h3>No pudimos cargar los productos</h3><p>Revisa tu conexión e inténtalo de nuevo.</p><button class="button button-outline" type="button" data-retry-catalog>Reintentar</button></div>`;
+  }
+}
 
-  if (!cartDrawer || !cartItemsEl) return;
-
-  const setDrawerA11yState = (isOpen) => {
-    cartDrawer.toggleAttribute("inert", !isOpen);
-    cartDrawer.setAttribute("aria-hidden", String(!isOpen));
-  };
-
-  setDrawerA11yState(false);
-
-  const readCart = () => {
-    try {
-      return JSON.parse(localStorage.getItem(CART_STORAGE_KEY)) || [];
-    } catch {
-      return [];
-    }
-  };
-
-  const writeCart = (items) => {
-    localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(items));
-    render(items);
-  };
-
-  const render = (items) => {
-    const totalUnits = items.reduce((sum, item) => sum + item.quantity, 0);
-    const totalPrice = items.reduce(
-      (sum, item) => sum + item.quantity * item.price,
-      0
-    );
-
-    if (cartCountEl) cartCountEl.textContent = String(totalUnits);
-    if (cartTotalEl) cartTotalEl.textContent = formatCOP(totalPrice);
-
-    const isEmpty = items.length === 0;
-    if (cartEmptyEl) cartEmptyEl.hidden = !isEmpty;
-    if (cartFooterEl) cartFooterEl.hidden = isEmpty;
-
-    cartItemsEl.innerHTML = "";
-    items.forEach((item, index) => {
-      const li = document.createElement("li");
-      li.className = "cart-item";
-      li.innerHTML = `
-        <img src="${escapeHTML(item.image)}" alt="" class="cart-item-image">
-        <div class="cart-item-info">
-          <p class="cart-item-name">${escapeHTML(item.name)}</p>
-          <p class="cart-item-price">${formatCOP(item.price)}</p>
-          <div class="cart-item-qty">
-            <button type="button" class="qty-btn" data-qty-decrease="${index}" aria-label="Quitar una unidad">-</button>
-            <span>${item.quantity}</span>
-            <button type="button" class="qty-btn" data-qty-increase="${index}" aria-label="Agregar una unidad">+</button>
-          </div>
-        </div>
-        <button type="button" class="cart-item-remove" data-remove-item="${index}" aria-label="Eliminar ${escapeHTML(item.name)}">
-          <i class="fa-solid fa-trash" aria-hidden="true"></i>
-        </button>
-      `;
-      cartItemsEl.appendChild(li);
+function renderCatalog() {
+  const grid = document.querySelector("[data-product-grid]");
+  if (!grid || !catalogProducts.length) return;
+  const categorySlug = grid.dataset.category || "";
+  let visible;
+  if (categorySlug) {
+    visible = catalogProducts.filter((product) => product.category === categorySlug);
+  } else if (catalogState.query) {
+    const query = normalizeText(catalogState.query);
+    visible = catalogProducts.filter((product) => {
+      const category = CATEGORY_BY_SLUG.get(product.category);
+      return normalizeText([product.name, product.description, category?.label].join(" ")).includes(query);
     });
-  };
+  } else if (catalogState.mode === "featured") {
+    visible = catalogProducts.filter((product) => product.featured || product.recommended).slice(0, 8);
+    if (!visible.length) visible = catalogProducts.slice(0, 8);
+  } else if (catalogState.mode === "all") {
+    visible = catalogProducts.slice();
+  } else {
+    visible = catalogProducts.filter((product) => product.category === catalogState.mode);
+  }
+  visible = [...visible];
+  if (catalogState.sort === "price-asc") visible.sort((a, b) => a.price - b.price);
+  if (catalogState.sort === "price-desc") visible.sort((a, b) => b.price - a.price);
+  if (catalogState.sort === "name") visible.sort((a, b) => a.name.localeCompare(b.name, "es"));
 
-  cartItemsEl.addEventListener("click", (event) => {
-    const items = readCart();
-    const increaseBtn = event.target.closest("[data-qty-increase]");
-    const decreaseBtn = event.target.closest("[data-qty-decrease]");
-    const removeBtn = event.target.closest("[data-remove-item]");
-
-    if (increaseBtn) {
-      const index = Number(increaseBtn.dataset.qtyIncrease);
-      if (!items[index]) return;
-      items[index].quantity += 1;
-      writeCart(items);
-    } else if (decreaseBtn) {
-      const index = Number(decreaseBtn.dataset.qtyDecrease);
-      if (!items[index]) return;
-      items[index].quantity -= 1;
-      if (items[index].quantity <= 0) items.splice(index, 1);
-      writeCart(items);
-    } else if (removeBtn) {
-      const index = Number(removeBtn.dataset.removeItem);
-      if (!items[index]) return;
-      items.splice(index, 1);
-      writeCart(items);
-    }
+  const label = document.querySelector("[data-results-label]");
+  if (label) {
+    const count = `${visible.length} ${visible.length === 1 ? "producto" : "productos"}`;
+    if (catalogState.query) label.textContent = `${count} para “${catalogState.query}”`;
+    else if (categorySlug) label.textContent = `${count} en ${CATEGORY_BY_SLUG.get(categorySlug)?.label || "esta categoría"}`;
+    else if (catalogState.mode === "featured") label.textContent = `Nuestros favoritos · ${visible.length} de ${catalogProducts.length} productos`;
+    else label.textContent = count;
+  }
+  const clear = document.querySelector("[data-clear-search]");
+  if (clear) clear.hidden = !catalogState.query;
+  const more = document.querySelector("[data-show-all]");
+  if (more) { more.hidden = !!catalogState.query || catalogState.mode !== "featured"; more.innerHTML = `Ver los ${catalogProducts.length} productos <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>`; }
+  document.querySelectorAll("[data-filter]").forEach((button) => {
+    const active = !catalogState.query && button.dataset.filter === catalogState.mode;
+    button.classList.toggle("is-active", active);
+    button.setAttribute("aria-pressed", String(active));
   });
-
-  productGrid?.addEventListener("click", (event) => {
-    const button = event.target.closest("[data-add-to-cart]");
-    if (!button) return;
-
-    const card = button.closest("[data-product-name]");
-    if (!card) return;
-
-    const name = card.dataset.productName;
-    const price = Number(card.dataset.productPrice || 0);
-    const image = card.querySelector("img")?.src || "";
-    const items = readCart();
-    const existing = items.find((item) => item.name === name);
-
-    if (existing) {
-      existing.quantity += 1;
-    } else {
-      items.push({ name, price, image, quantity: 1 });
-    }
-
-    writeCart(items);
-
-    const originalText = button.textContent;
-    button.textContent = "Agregado";
-    button.disabled = true;
-    setTimeout(() => {
-      button.textContent = originalText;
-      button.disabled = false;
-    }, 900);
-  });
-
-  const openDrawer = () => {
-    cartDrawer.classList.add("is-open");
-    cartOverlay.hidden = false;
-    requestAnimationFrame(() => cartOverlay.classList.add("is-visible"));
-    setDrawerA11yState(true);
-    document.body.style.overflow = "hidden";
-  };
-
-  const closeDrawer = () => {
-    cartDrawer.classList.remove("is-open");
-    cartOverlay.classList.remove("is-visible");
-    setDrawerA11yState(false);
-    document.body.style.overflow = "";
-    showCartView();
-    setTimeout(() => {
-      if (!cartDrawer.classList.contains("is-open")) cartOverlay.hidden = true;
-    }, 300);
-  };
-
-  const showCheckoutView = () => {
-    cartView.hidden = true;
-    cartFooterEl.hidden = true;
-    checkoutForm.hidden = false;
-  };
-
-  const showCartView = () => {
-    cartView.hidden = false;
-    checkoutForm.hidden = true;
-    const items = readCart();
-    if (cartFooterEl) cartFooterEl.hidden = items.length === 0;
-  };
-
-  cartOpenBtn?.addEventListener("click", openDrawer);
-  cartCloseBtn?.addEventListener("click", closeDrawer);
-  cartOverlay?.addEventListener("click", closeDrawer);
-  document.querySelector("[data-cart-close-link]")?.addEventListener("click", closeDrawer);
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && cartDrawer.classList.contains("is-open")) {
-      closeDrawer();
-    }
-  });
-
-  openCheckoutBtn?.addEventListener("click", showCheckoutView);
-  checkoutBackBtn?.addEventListener("click", showCartView);
-
-  checkoutForm?.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const items = readCart();
-    if (!items.length) return;
-
-    const formData = new FormData(checkoutForm);
-    const nombre = formData.get("nombre")?.toString().trim();
-    const telefono = formData.get("telefono")?.toString().trim();
-    const ciudad = formData.get("ciudad")?.toString().trim();
-    const direccion = formData.get("direccion")?.toString().trim();
-    const notas = formData.get("notas")?.toString().trim();
-
-    if (!nombre || !telefono || !ciudad || !direccion) return;
-
-    const total = items.reduce((sum, item) => sum + item.quantity * item.price, 0);
-    const lines = [
-      "Hola, quiero confirmar este pedido de MerkaLatina Colombia:",
-      "",
-      ...items.map(
-        (item) => `- ${item.name} x${item.quantity} - ${formatCOP(item.price * item.quantity)}`
-      ),
-      "",
-      `Total: ${formatCOP(total)}`,
-      "",
-      `Nombre: ${nombre}`,
-      `Teléfono: ${telefono}`,
-      `Ciudad: ${ciudad}`,
-      `Dirección: ${direccion}`
-    ];
-
-    if (notas) lines.push(`Notas: ${notas}`);
-    lines.push("", "Pago contra entrega.");
-
-    const message = encodeURIComponent(lines.join("\n"));
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank", "noopener");
-
-    writeCart([]);
-    checkoutForm.reset();
-    closeDrawer();
-  });
-
-  render(readCart());
-}
-
-/* ------------------------------------------------------------------ */
-/* Animacion de aparicion al hacer scroll                              */
-/* ------------------------------------------------------------------ */
-function initScrollReveal() {
-  const targets = document.querySelectorAll("[data-reveal]");
-  if (!targets.length) return;
-
-  const prefersReducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
-
-  if (prefersReducedMotion || typeof IntersectionObserver === "undefined") {
-    targets.forEach((el) => el.classList.add("is-visible"));
+  if (!visible.length) {
+    grid.innerHTML = `<div class="empty-state"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><h3>No encontramos productos</h3><p>${catalogState.query ? "Prueba con otra palabra o explora el catálogo completo." : "Todavía no hay productos en esta selección."}</p>${categorySlug ? `<a class="button button-outline" href="${getHomeUrl()}#productos">Ver todo el catálogo</a>` : `<button class="button button-outline" type="button" data-reset-filters>Ver todos los productos</button>`}</div>`;
     return;
   }
-
-  const observer = new IntersectionObserver(
-    (entries, obs) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          obs.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
-
-  targets.forEach((el) => observer.observe(el));
+  grid.innerHTML = visible.map(renderProductCard).join("");
 }
+
+function renderProductCard(product) {
+  const category = CATEGORY_BY_SLUG.get(product.category);
+  const oldPrice = Number(product.oldPrice);
+  const hasDiscount = Number.isFinite(oldPrice) && oldPrice > product.price;
+  const discount = hasDiscount ? Math.round((1 - product.price / oldPrice) * 100) : 0;
+  return `<article class="product-card">
+    <div class="product-media"><button type="button" data-product-details="${escapeHTML(product.id)}" aria-label="Ver detalles de ${escapeHTML(product.name)}"><img class="product-image" src="${escapeHTML(resolveAssetPath(product.image))}" alt="${escapeHTML(product.name)}" loading="lazy" decoding="async" width="420" height="420"></button>${discount ? `<span class="product-badge">-${discount}%</span>` : ""}</div>
+    <div class="product-body"><span class="product-category">${escapeHTML(category?.label || "")}</span><h3><button type="button" data-product-details="${escapeHTML(product.id)}">${escapeHTML(product.name)}</button></h3><p class="product-description">${escapeHTML(product.description || "")}</p><div class="product-prices"><strong>${formatCOP(product.price)}</strong>${hasDiscount ? `<del>${formatCOP(oldPrice)}</del>` : ""}</div><button class="product-add" type="button" data-add-to-cart="${escapeHTML(product.id)}"><i class="fa-solid fa-plus" aria-hidden="true"></i> Agregar al carrito</button></div>
+  </article>`;
+}
+
+function initProductDialog() {
+  const dialog = document.querySelector("[data-product-dialog]");
+  if (!dialog) return;
+  let previousFocus = null;
+  document.addEventListener("click", (event) => {
+    const trigger = event.target.closest("[data-product-details]");
+    if (!trigger) return;
+    const product = findProduct(trigger.dataset.productDetails);
+    if (!product) return;
+    previousFocus = trigger;
+    const category = CATEGORY_BY_SLUG.get(product.category);
+    const oldPrice = Number(product.oldPrice);
+    const message = encodeURIComponent(`Hola, quisiera saber más sobre ${product.name} (${formatCOP(product.price)}). ¿Está disponible?`);
+    dialog.querySelector("[data-dialog-content]").innerHTML = `<div class="detail-layout"><div class="detail-image"><img class="product-image" src="${escapeHTML(resolveAssetPath(product.image))}" alt="${escapeHTML(product.name)}" width="600" height="600"></div><div class="detail-copy"><span class="eyebrow">${escapeHTML(category?.label || "")}</span><h2 id="dialog-title">${escapeHTML(product.name)}</h2><div class="product-prices"><strong>${formatCOP(product.price)}</strong>${oldPrice > product.price ? `<del>${formatCOP(oldPrice)}</del>` : ""}</div><p>${escapeHTML(product.description || "")}</p><div class="detail-info"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Envío y disponibilidad se confirman por WhatsApp.</div><button class="button button-primary" type="button" data-add-to-cart="${escapeHTML(product.id)}"><i class="fa-solid fa-plus" aria-hidden="true"></i> Agregar al carrito</button><a class="detail-whatsapp" href="https://wa.me/${WHATSAPP_NUMBER}?text=${message}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Preguntar por este producto</a></div></div>`;
+    if (typeof dialog.showModal === "function") dialog.showModal();
+  });
+  dialog.querySelector("[data-dialog-close]").addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (event) => { if (event.target === dialog) dialog.close(); });
+  dialog.addEventListener("close", () => previousFocus?.focus());
+  document.addEventListener("error", (event) => {
+    if (event.target.matches?.("img.product-image") && !event.target.dataset.fallback) {
+      event.target.dataset.fallback = "true";
+      event.target.src = resolveAssetPath("assets/images/product-placeholder.svg");
+    } else if (event.target.matches?.("img.collection-hero-image, .category-card img")) {
+      event.target.hidden = true; // Mejor un fondo neutro que una foto de otra categoría.
+    }
+  }, true);
+}
+
+function readCart() {
+  try {
+    const raw = cartMemory ?? JSON.parse(localStorage.getItem(CART_STORAGE_KEY) || "[]");
+    if (!Array.isArray(raw)) return [];
+    return raw.filter((item) => item && (item.id != null || typeof item.name === "string") && Number.isFinite(Number(item.quantity)) && Number(item.quantity) > 0)
+      .map((item) => {
+        const product = catalogProducts.find((candidate) => String(candidate.id) === String(item.id) || candidate.name === item.name);
+        if (product) return { id: product.id, name: product.name, price: Number(product.price), image: product.image, quantity: Math.min(99, Math.floor(Number(item.quantity))) };
+        if (catalogProducts.length || typeof item.name !== "string" || !Number.isFinite(Number(item.price))) return null;
+        return { id: item.id ?? item.name, name: item.name, price: Math.max(0, Number(item.price)), image: item.image || "", quantity: Math.min(99, Math.floor(Number(item.quantity))) };
+      }).filter(Boolean);
+  } catch { return []; }
+}
+function saveCart(items) {
+  cartMemory = items;
+  try { localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(items)); }
+  catch { showToast("Tu carrito se conservará mientras mantengas abierta esta página."); }
+  renderCart();
+}
+function addToCart(id) {
+  const product = findProduct(id);
+  if (!product) return;
+  const items = readCart();
+  const existing = items.find((item) => String(item.id) === String(product.id));
+  if (existing) existing.quantity = Math.min(99, existing.quantity + 1);
+  else items.push({ id: product.id, name: product.name, price: Number(product.price), image: product.image, quantity: 1 });
+  saveCart(items);
+  showToast(`${product.name} se agregó al carrito.`, true);
+}
+function showToast(message, showCartButton = false) {
+  const toast = document.querySelector("[data-toast]");
+  if (!toast) return;
+  clearTimeout(toastTimeout);
+  toast.replaceChildren();
+  const text = document.createElement("span"); text.textContent = message; toast.append(text);
+  if (showCartButton) { const button = document.createElement("button"); button.type = "button"; button.textContent = "Ver carrito"; button.addEventListener("click", () => { toast.hidden = true; document.querySelector("[data-cart-open]")?.click(); }); toast.append(button); }
+  toast.hidden = false;
+  toastTimeout = setTimeout(() => { toast.hidden = true; }, 4500);
+}
+
+function renderCart() {
+  const list = document.querySelector("[data-cart-items]");
+  if (!list) return;
+  const items = readCart();
+  const totalUnits = items.reduce((total, item) => total + item.quantity, 0);
+  const total = items.reduce((sum, item) => sum + item.quantity * item.price, 0);
+  document.querySelector("[data-cart-count]").textContent = String(totalUnits);
+  document.querySelector("[data-cart-title-count]").textContent = `(${totalUnits})`;
+  document.querySelector("[data-cart-total]").textContent = formatCOP(total);
+  document.querySelector("[data-cart-empty]").hidden = items.length > 0;
+  const checkout = document.querySelector("[data-checkout-form]");
+  if (!items.length && !checkout.hidden) showCartView();
+  document.querySelector("[data-cart-footer]").hidden = !items.length || !checkout.hidden;
+  list.innerHTML = items.map((item) => `<li class="cart-item"><img class="cart-item-image" src="${escapeHTML(resolveAssetPath(item.image))}" alt="" width="74" height="74"><div class="cart-item-info"><strong>${escapeHTML(item.name)}</strong><span>${formatCOP(item.price)}</span><div class="cart-item-qty"><button type="button" data-qty-decrease="${escapeHTML(item.id)}" aria-label="Quitar una unidad de ${escapeHTML(item.name)}">−</button><span aria-label="${item.quantity} unidades">${item.quantity}</span><button type="button" data-qty-increase="${escapeHTML(item.id)}" aria-label="Agregar una unidad de ${escapeHTML(item.name)}">+</button></div></div><button class="cart-remove icon-button" type="button" data-remove-item="${escapeHTML(item.id)}" aria-label="Eliminar ${escapeHTML(item.name)}"><i class="fa-solid fa-trash-can" aria-hidden="true"></i></button></li>`).join("");
+}
+function showCartView() {
+  document.querySelector("[data-cart-view]").hidden = false;
+  document.querySelector("[data-checkout-form]").hidden = true;
+  document.querySelector("[data-cart-footer]").hidden = readCart().length === 0;
+  document.querySelector("[data-checkout-fallback]")?.setAttribute("hidden", "");
+}
+
+function initCart() {
+  const drawer = document.querySelector("[data-cart-drawer]");
+  const overlay = document.querySelector("[data-cart-overlay]");
+  const checkoutForm = document.querySelector("[data-checkout-form]");
+  if (!drawer || !overlay) return;
+  const background = [...document.querySelectorAll("[data-site-header], main, [data-site-footer]")];
+  let previousFocus = null;
+  const open = () => {
+    previousFocus = document.activeElement.closest?.("[data-toast]") ? document.querySelector("[data-cart-open]") : document.activeElement;
+    drawer.inert = false;
+    drawer.setAttribute("aria-hidden", "false");
+    overlay.hidden = false;
+    background.forEach((element) => { element.inert = true; });
+    document.body.classList.add("cart-is-open");
+    requestAnimationFrame(() => { drawer.classList.add("is-open"); overlay.classList.add("is-visible"); });
+    drawer.querySelector("[data-cart-close]").focus();
+  };
+  const close = () => {
+    drawer.classList.remove("is-open");
+    overlay.classList.remove("is-visible");
+    drawer.inert = true;
+    drawer.setAttribute("aria-hidden", "true");
+    background.forEach((element) => { element.inert = false; });
+    document.body.classList.remove("cart-is-open");
+    showCartView();
+    setTimeout(() => { if (!drawer.classList.contains("is-open")) overlay.hidden = true; }, 300);
+    previousFocus?.focus();
+  };
+  document.querySelector("[data-cart-open]")?.addEventListener("click", open);
+  drawer.querySelector("[data-cart-close]").addEventListener("click", close);
+  overlay.addEventListener("click", close);
+  drawer.querySelector("[data-cart-close-link]")?.addEventListener("click", close);
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && drawer.classList.contains("is-open")) close();
+    if (event.key !== "Tab" || !drawer.classList.contains("is-open")) return;
+    const focusable = [...drawer.querySelectorAll('a[href], button:not([disabled]), input, textarea, select')].filter((element) => !element.closest("[hidden]") && !element.hidden);
+    if (!focusable.length) return;
+    const first = focusable[0], last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+  });
+  document.addEventListener("click", (event) => {
+    const add = event.target.closest("[data-add-to-cart]");
+    if (add) { addToCart(add.dataset.addToCart); const dialog = add.closest("dialog"); if (dialog?.open) dialog.close(); }
+    const action = event.target.closest("[data-qty-increase], [data-qty-decrease], [data-remove-item]");
+    if (!action) return;
+    const id = action.dataset.qtyIncrease ?? action.dataset.qtyDecrease ?? action.dataset.removeItem;
+    const items = readCart();
+    const item = items.find((entry) => String(entry.id) === String(id));
+    if (!item) return;
+    if (action.hasAttribute("data-qty-increase")) item.quantity = Math.min(99, item.quantity + 1);
+    if (action.hasAttribute("data-qty-decrease")) item.quantity -= 1;
+    saveCart(items.filter((entry) => entry.quantity > 0 && (action.hasAttribute("data-remove-item") ? String(entry.id) !== String(id) : true)));
+  });
+  drawer.querySelector("[data-open-checkout]").addEventListener("click", () => {
+    document.querySelector("[data-cart-view]").hidden = true;
+    document.querySelector("[data-cart-footer]").hidden = true;
+    checkoutForm.hidden = false;
+    checkoutForm.querySelector("input").focus();
+  });
+  drawer.querySelector("[data-checkout-back]").addEventListener("click", showCartView);
+  checkoutForm.querySelectorAll("input[required]").forEach((input) => input.addEventListener("input", () => input.setCustomValidity("")));
+  checkoutForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const items = readCart();
+    if (!items.length) { showCartView(); return; }
+    for (const input of checkoutForm.querySelectorAll("input[required]")) {
+      if (!input.value.trim()) { input.setCustomValidity("Completa este campo."); input.reportValidity(); return; }
+    }
+    if (!checkoutForm.reportValidity()) return;
+    const fields = Object.fromEntries(new FormData(checkoutForm));
+    const clean = (value) => String(value || "").trim().replace(/\s+/g, " ");
+    const total = items.reduce((sum, item) => sum + item.quantity * item.price, 0);
+    const lines = ["Hola, quiero confirmar este pedido en MerkaLatina Colombia:", "", ...items.map((item) => `• ${item.name} x${item.quantity} — ${formatCOP(item.price * item.quantity)}`), "", `Subtotal estimado: ${formatCOP(total)}`, "Envío y disponibilidad por confirmar.", "", `Nombre: ${clean(fields.nombre)}`, `Teléfono: ${clean(fields.telefono)}`, `Ciudad: ${clean(fields.ciudad)}`, `Dirección: ${clean(fields.direccion)}`];
+    if (clean(fields.notas)) lines.push(`Notas: ${clean(fields.notas)}`);
+    lines.push("", "Quedo pendiente de la confirmación del pedido. Gracias.");
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`;
+    const fallback = checkoutForm.querySelector("[data-checkout-fallback]");
+    fallback.href = url;
+    fallback.hidden = false;
+    window.open(url, "_blank", "noopener,noreferrer");
+    showToast("Revisa y envía el mensaje en WhatsApp. Tu carrito sigue guardado.");
+  });
+  window.addEventListener("storage", (event) => { if (event.key === CART_STORAGE_KEY) { cartMemory = null; renderCart(); } });
+  renderCart();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderCategoryPageShell();
+  renderSharedShells();
+  renderCategories();
+  initNavigation();
+  initSearch();
+  initCatalogControls();
+  initProductDialog();
+  initCart();
+  loadProducts();
+});
