@@ -458,29 +458,20 @@ section[id] { scroll-margin-top: 172px; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
 
-/* Encabezado ampliado (≈ +5 cm en escritorio): fijo, y se compacta al bajar */
-[data-site-header] { display: block; }
-.site-header { position: fixed; top: 0; left: 0; right: 0; }
-.site-header.is-ready .header-main, .site-header.is-ready .brand img { transition: min-height .25s ease, height .25s ease, width .25s ease; }
-@media (min-width: 801px) {
-  .site-header .header-main { min-height: 273px; }
-  .site-header .brand img { width: 155px; height: auto; }
-  .site-header .brand { gap: 18px; }
-  .site-header .brand-text strong { font-size: 2.1rem; }
-  .site-header .brand-text small { font-size: .78rem; }
-  .site-header .header-search { height: 54px; }
-  .site-header.is-compact .header-main { min-height: 84px; }
-  .site-header.is-compact .brand img { width: 34px; }
-  .site-header.is-compact .brand { gap: 10px; }
-  .site-header.is-compact .brand-text strong { font-size: 1.22rem; }
-  .site-header.is-compact .brand-text small { font-size: .57rem; }
-  .site-header.is-compact .header-search { height: 46px; }
-}
+/* Encabezado: logo más grande y nombre en mayúsculas */
+.brand-text strong { text-transform: uppercase; letter-spacing: -.02em; }
+.site-header .brand img { width: 66px; height: auto; }
+.site-header .brand { gap: 14px; }
+.site-header .brand-text strong { font-size: 1.6rem; }
+.site-header .brand-text small { font-size: .66rem; }
+.site-header .header-main { min-height: 118px; }
 @media (max-width: 800px) {
-  .site-header .brand img { width: 44px; height: auto; }
+  .site-header .header-main { min-height: 0; }
+  .site-header .brand img { width: 44px; }
 }
 @media (max-width: 680px) {
-  .site-header .brand img { width: 36px; }
+  .site-header .brand img { width: 38px; }
+  .site-header .brand-text strong { font-size: 1.1rem; }
 }
 
 /* Enlaces del pie de página en dorado */
