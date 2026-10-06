@@ -8,7 +8,8 @@
     "category": "hogar",
     "description": "Caja fuerte camuflada como libro para guardar dinero, joyas y objetos de valor.",
     "whatsapp": "573001234567",
-    "featured": true
+    "featured": true,
+    "badge": "Más pedido"
   },
   {
     "id": 2,
@@ -277,5 +278,374 @@
     "category": "temporada",
     "description": "Set práctico para sorprender en fechas especiales con una presentación cuidada.",
     "whatsapp": "573001234567"
+  },
+  {
+    "id": 28,
+    "name": "Caja Fuerte Mediana 20E",
+    "price": 150000,
+    "oldPrice": 185000,
+    "image": "assets/images/product-placeholder.svg",
+    "category": "hogar",
+    "description": "Caja fuerte mediana modelo 20E para guardar dinero, documentos y objetos de valor en casa u oficina.",
+    "whatsapp": "573044151020",
+    "badge": "Seguridad"
+  },
+  {
+    "id": 29,
+    "name": "Termo Inteligente con Pantalla de Temperatura",
+    "price": 45000,
+    "oldPrice": 60000,
+    "image": "assets/images/products/termo-inteligente/termo-colores.jpg",
+    "category": "cocina",
+    "description": "Termo de acero inoxidable 304 con pantalla LED táctil que muestra la temperatura. Sello hermético, tapa que se abre con una mano, base antideslizante y libre de BPA. Mantiene frías o calientes tus bebidas.",
+    "whatsapp": "573044151020",
+    "images": [
+      {
+        "src": "assets/images/products/termo-inteligente/termo-colores.jpg",
+        "label": "Colores"
+      },
+      {
+        "src": "assets/images/products/termo-inteligente/termo-diseno-moderno.jpg",
+        "label": "Diseño"
+      },
+      {
+        "src": "assets/images/products/termo-inteligente/termo-caracteristicas.jpg",
+        "label": "Características"
+      },
+      {
+        "src": "assets/images/products/termo-inteligente/termo-tapa-facil.jpg",
+        "label": "Tapa fácil"
+      }
+    ],
+    "badge": "Favorito",
+    "featured": true
+  },
+  {
+    "id": 30,
+    "name": "Lunch Box Portátil 3 Niveles",
+    "price": 95000,
+    "oldPrice": 125000,
+    "image": "assets/images/products/lunch-box/lonchera-principal.jpg",
+    "category": "cocina",
+    "description": "Lonchera térmica de 1040 ml con recipientes en acero inoxidable (420 ml y 620 ml), asa plegable, válvula de salida de aire y anillo de silicona antiderrames. Incluye funda para llevarla a todas partes.",
+    "whatsapp": "573044151020",
+    "images": [
+      {
+        "src": "assets/images/products/lunch-box/lonchera-principal.jpg",
+        "label": "Principal"
+      },
+      {
+        "src": "assets/images/products/lunch-box/lonchera-capacidad.jpg",
+        "label": "Capacidad"
+      },
+      {
+        "src": "assets/images/products/lunch-box/lonchera-detalles.jpg",
+        "label": "Detalles"
+      },
+      {
+        "src": "assets/images/products/lunch-box/lonchera-en-uso.jpg",
+        "label": "En uso"
+      },
+      {
+        "src": "assets/images/products/lunch-box/lonchera-interior-acero.jpg",
+        "label": "Interior acero"
+      }
+    ],
+    "badge": "Nuevo",
+    "featured": true
+  },
+  {
+    "id": 31,
+    "name": "Decodificador TDT Full HD",
+    "price": 95000,
+    "oldPrice": 125000,
+    "image": "assets/images/products/decodificador-tdt/tdt-kit-completo.jpg",
+    "category": "tecnologia",
+    "description": "Receptor de Televisión Digital Terrestre para ver canales en alta definición sin mensualidad. Salidas HDMI y AV (RCA), puerto USB multimedia, control remoto y antena incluidos.",
+    "whatsapp": "573044151020",
+    "images": [
+      {
+        "src": "assets/images/products/decodificador-tdt/tdt-kit-completo.jpg",
+        "label": "Kit completo"
+      },
+      {
+        "src": "assets/images/products/decodificador-tdt/tdt-caja-y-puertos.jpg",
+        "label": "Caja y puertos"
+      },
+      {
+        "src": "assets/images/products/decodificador-tdt/tdt-conexiones.jpg",
+        "label": "Conexiones"
+      }
+    ],
+    "badge": "Sin mensualidad",
+    "featured": true
+  },
+  {
+    "id": 32,
+    "name": "Kit Máquinas Barbería WMark",
+    "price": 300000,
+    "oldPrice": 380000,
+    "image": "assets/images/products/kit-barberia/magic-clip-con-caja.jpg",
+    "category": "salud-belleza",
+    "description": "Kit profesional de barbería con máquina inalámbrica Magic Clip dorada (cuchilla de dientes escalonados) y máquina de acabados con peines guía. Ideal para barberos y para cortes en casa.",
+    "whatsapp": "573044151020",
+    "images": [
+      {
+        "src": "assets/images/products/kit-barberia/magic-clip-con-caja.jpg",
+        "label": "Magic Clip"
+      },
+      {
+        "src": "assets/images/products/kit-barberia/magic-clip-detalle.jpg",
+        "label": "Detalle"
+      },
+      {
+        "src": "assets/images/products/combo-barberia/maquina-contenido-caja.jpg",
+        "label": "Segunda máquina"
+      },
+      {
+        "src": "assets/images/products/combo-barberia/maquina-detalles.jpg",
+        "label": "Detalles máquina"
+      }
+    ],
+    "badge": "Kit completo",
+    "featured": true
+  },
+  {
+    "id": 33,
+    "name": "Combo Profesional Barbería",
+    "price": 130000,
+    "oldPrice": 165000,
+    "image": "assets/images/products/combo-barberia/maquina-contenido-caja.jpg",
+    "category": "salud-belleza",
+    "description": "Máquina de acabados con diseño dorado, cuchilla en T, 3 peines guía, cepillo de limpieza, aceite lubricante y manual. Perfecta para perfilar barba y detalles.",
+    "whatsapp": "573044151020",
+    "images": [
+      {
+        "src": "assets/images/products/combo-barberia/maquina-contenido-caja.jpg",
+        "label": "Contenido"
+      },
+      {
+        "src": "assets/images/products/combo-barberia/maquina-detalles.jpg",
+        "label": "Detalles"
+      }
+    ],
+    "badge": "Combo",
+    "featured": true
+  },
+  {
+    "id": 34,
+    "name": "Manta Forro Polar 3D",
+    "price": 70000,
+    "oldPrice": 90000,
+    "image": "assets/images/products/manta-polar-3d/cobija-azul.jpg",
+    "category": "hogar",
+    "description": "Manta suave de forro polar con textura 3D, abrigadora y fácil de combinar. Disponible en azul, café, fucsia, gris y rojo.",
+    "whatsapp": "573044151020",
+    "images": [
+      {
+        "src": "assets/images/products/manta-polar-3d/cobija-azul.jpg",
+        "label": "Azul"
+      },
+      {
+        "src": "assets/images/products/manta-polar-3d/cobija-cafe.jpg",
+        "label": "Café"
+      },
+      {
+        "src": "assets/images/products/manta-polar-3d/cobija-fucsia.jpg",
+        "label": "Fucsia"
+      },
+      {
+        "src": "assets/images/products/manta-polar-3d/cobija-gris.jpg",
+        "label": "Gris"
+      },
+      {
+        "src": "assets/images/products/manta-polar-3d/cobija-roja.jpg",
+        "label": "Rojo"
+      }
+    ],
+    "badge": "Favorito",
+    "featured": true
+  },
+  {
+    "id": 35,
+    "name": "Cobija Multiclima",
+    "price": 65000,
+    "oldPrice": 85000,
+    "image": "assets/images/product-placeholder.svg",
+    "category": "hogar",
+    "description": "Cobija cómoda para todo clima: abriga en noches frías y se siente ligera cuando el ambiente es más cálido.",
+    "whatsapp": "573044151020",
+    "badge": "Oferta"
+  },
+  {
+    "id": 36,
+    "name": "Almohada Ortopédica Cervical",
+    "price": 80000,
+    "oldPrice": 105000,
+    "image": "assets/images/products/almohada-cervical/almohada-par-fondo-blanco.jpg",
+    "category": "hogar",
+    "description": "Almohada ergonómica con forma ondulada que acompaña la curva del cuello y la cabeza. Medidas aprox. 58 x 37 x 10 cm, con paneles de malla transpirable a los lados.",
+    "whatsapp": "573044151020",
+    "images": [
+      {
+        "src": "assets/images/products/almohada-cervical/almohada-par-fondo-blanco.jpg",
+        "label": "Vista frontal"
+      },
+      {
+        "src": "assets/images/products/almohada-cervical/almohada-par-en-cama.jpg",
+        "label": "En cama"
+      },
+      {
+        "src": "assets/images/products/almohada-cervical/almohada-medidas.jpg",
+        "label": "Medidas"
+      }
+    ],
+    "badge": "Para dormir mejor",
+    "featured": true
+  },
+  {
+    "id": 37,
+    "name": "Protector de Colchón Antiderrame",
+    "price": 75000,
+    "oldPrice": 95000,
+    "image": "assets/images/product-placeholder.svg",
+    "category": "hogar",
+    "description": "Protector de colchón antiderrame para mantener tu cama limpia y cuidada por más tiempo.",
+    "whatsapp": "573044151020"
+  },
+  {
+    "id": 38,
+    "name": "Combo Protector + Sábanas",
+    "price": 120000,
+    "oldPrice": 155000,
+    "image": "assets/images/product-placeholder.svg",
+    "category": "hogar",
+    "description": "Combo para vestir tu cama: protector de colchón antiderrame más juego de sábanas.",
+    "whatsapp": "573044151020",
+    "badge": "Combo"
+  },
+  {
+    "id": 39,
+    "name": "Colcha Premium Doble Tono",
+    "price": 110000,
+    "oldPrice": 140000,
+    "image": "assets/images/product-placeholder.svg",
+    "category": "hogar",
+    "description": "Colcha premium de doble tono para darle un aire renovado y elegante a tu habitación.",
+    "whatsapp": "573044151020"
+  },
+  {
+    "id": 40,
+    "name": "Edredón Premium Doble Tono",
+    "price": 130000,
+    "oldPrice": 165000,
+    "image": "assets/images/product-placeholder.svg",
+    "category": "hogar",
+    "description": "Edredón premium de doble tono, cómodo y abrigador para tus noches de descanso.",
+    "whatsapp": "573044151020"
+  },
+  {
+    "id": 41,
+    "name": "Sábanas Premium + Almohadas",
+    "price": 80000,
+    "oldPrice": 105000,
+    "image": "assets/images/product-placeholder.svg",
+    "category": "hogar",
+    "description": "Juego de sábanas premium con almohadas incluidas para completar tu cama.",
+    "whatsapp": "573044151020",
+    "badge": "Combo"
+  },
+  {
+    "id": 42,
+    "name": "Botas Caterpillar Corte Medio",
+    "price": 110000,
+    "oldPrice": 140000,
+    "image": "assets/images/product-placeholder.svg",
+    "category": "calzado",
+    "description": "Botas de corte medio estilo Caterpillar, resistentes y cómodas para el trabajo y el día a día.",
+    "whatsapp": "573044151020"
+  },
+  {
+    "id": 43,
+    "name": "Calzado Nacional Casual",
+    "price": 110000,
+    "oldPrice": 140000,
+    "image": "assets/images/products/calzado-nacional/tenis-negro.jpg",
+    "category": "calzado",
+    "description": "Tenis casuales con suela gruesa antideslizante y acabado tipo nobuck. Disponibles en negro, azul, beige, café claro, café oscuro y mostaza.",
+    "whatsapp": "573044151020",
+    "images": [
+      {
+        "src": "assets/images/products/calzado-nacional/tenis-negro.jpg",
+        "label": "Negro"
+      },
+      {
+        "src": "assets/images/products/calzado-nacional/tenis-azul.jpg",
+        "label": "Azul"
+      },
+      {
+        "src": "assets/images/products/calzado-nacional/tenis-beige.jpg",
+        "label": "Beige"
+      },
+      {
+        "src": "assets/images/products/calzado-nacional/tenis-cafe-claro.jpg",
+        "label": "Café claro"
+      },
+      {
+        "src": "assets/images/products/calzado-nacional/tenis-cafe-oscuro.jpg",
+        "label": "Café oscuro"
+      },
+      {
+        "src": "assets/images/products/calzado-nacional/tenis-mostaza.jpg",
+        "label": "Mostaza"
+      }
+    ],
+    "badge": "Favorito",
+    "featured": true
+  },
+  {
+    "id": 44,
+    "name": "Funda Antideslizante para Zapatos",
+    "price": 60000,
+    "oldPrice": 80000,
+    "image": "assets/images/products/funda-zapatos/cubrezapatos-beneficios.jpg",
+    "category": "calzado",
+    "description": "Cubrezapatos impermeables y elásticos con suela antideslizante: protegen tu calzado de la lluvia y el barro. Ligeros y fáciles de poner con cierres laterales.",
+    "whatsapp": "573044151020",
+    "images": [
+      {
+        "src": "assets/images/products/funda-zapatos/cubrezapatos-beneficios.jpg",
+        "label": "Beneficios"
+      },
+      {
+        "src": "assets/images/products/funda-zapatos/cubrezapatos-elasticidad.jpg",
+        "label": "Elasticidad"
+      },
+      {
+        "src": "assets/images/products/funda-zapatos/cubrezapatos-en-uso.jpg",
+        "label": "En uso"
+      }
+    ],
+    "badge": "Temporada de lluvias"
+  },
+  {
+    "id": 45,
+    "name": "Cartera Dama Estilo Vélez",
+    "price": 65000,
+    "oldPrice": 85000,
+    "image": "assets/images/product-placeholder.svg",
+    "category": "vestuario-mujer",
+    "description": "Cartera para dama estilo Vélez, elegante y práctica para el día a día.",
+    "whatsapp": "573044151020"
+  },
+  {
+    "id": 46,
+    "name": "Plancha a Vapor",
+    "price": 120000,
+    "oldPrice": 150000,
+    "image": "assets/images/product-placeholder.svg",
+    "category": "electrodomesticos",
+    "description": "Plancha a vapor para dejar tu ropa lisa y lista en menos tiempo.",
+    "whatsapp": "573044151020"
   }
 ]
