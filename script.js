@@ -150,19 +150,6 @@ function initNavigation() {
   window.addEventListener("resize", () => { if (window.innerWidth > 800) setOpen(false); });
 }
 
-function initHeader() {
-  const header = document.querySelector("[data-header]");
-  if (!header) return;
-  const holder = header.parentElement;
-  const measure = () => { if (!header.classList.contains("is-compact")) holder.style.height = `${header.offsetHeight}px`; };
-  const update = () => header.classList.toggle("is-compact", window.scrollY > 140);
-  measure(); update();
-  requestAnimationFrame(() => requestAnimationFrame(() => header.classList.add("is-ready")));
-  window.addEventListener("scroll", update, { passive: true });
-  window.addEventListener("resize", () => { header.classList.remove("is-compact", "is-ready"); measure(); update(); requestAnimationFrame(() => requestAnimationFrame(() => header.classList.add("is-ready"))); });
-  window.addEventListener("load", () => { if (!header.classList.contains("is-compact")) measure(); });
-}
-
 function initSearch() {
   const form = document.querySelector("[data-search-form]");
   const input = document.getElementById("site-search");
@@ -527,7 +514,6 @@ document.addEventListener("DOMContentLoaded", () => {
   renderSharedShells();
   renderCategories();
   initNavigation();
-  initHeader();
   initSearch();
   initCatalogControls();
   initProductDialog();
