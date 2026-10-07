@@ -1,294 +1,24 @@
 [
   {
-    "id": 1,
-    "name": "Caja Fuerte tipo Libro",
-    "price": 80000,
-    "oldPrice": 100000,
-    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=700&q=80",
-    "category": "hogar",
-    "description": "Caja fuerte camuflada como libro para guardar dinero, joyas y objetos de valor.",
-    "whatsapp": "573001234567",
-    "featured": true,
-    "badge": "Más pedido"
-  },
-  {
-    "id": 2,
-    "name": "Organizador Modular de Cocina",
-    "price": 95000,
-    "oldPrice": 120000,
-    "image": "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=700&q=80",
-    "category": "hogar",
-    "description": "Organizador práctico para aprovechar mejor cajones, repisas y espacios de cocina.",
-    "whatsapp": "573001234567",
-    "featured": true
-  },
-  {
-    "id": 3,
-    "name": "DeoMent - Desodorante Interno Natural",
-    "price": 110000,
-    "oldPrice": 130000,
-    "image": "https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=700&q=80",
-    "category": "salud-belleza",
-    "description": "Desodorante interno natural que ayuda a combatir los malos olores desde el interior.",
-    "whatsapp": "573001234567",
-    "featured": true
-  },
-  {
     "id": 4,
     "name": "TripleRed Omega 3-6-9",
     "price": 100000,
     "oldPrice": 120000,
-    "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=700&q=80",
+    "image": "assets/images/products/triplered/triplered-frasco.jpg",
     "category": "salud-belleza",
-    "description": "Suplemento nutricional con ácidos grasos Omega 3, 6 y 9.",
-    "whatsapp": "573001234567",
-    "featured": true
-  },
-  {
-    "id": 5,
-    "name": "OregaPure 1500mg",
-    "price": 100000,
-    "oldPrice": 120000,
-    "image": "https://images.unsplash.com/photo-1602928321679-560bb453f190?auto=format&fit=crop&w=700&q=80",
-    "category": "salud-belleza",
-    "description": "Aceite de orégano concentrado de alta potencia 1500mg.",
-    "whatsapp": "573001234567"
-  },
-  {
-    "id": 6,
-    "name": "Set Didáctico de Bloques",
-    "price": 75000,
-    "oldPrice": 95000,
-    "image": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=700&q=80",
-    "category": "infantil",
-    "description": "Juego de bloques para estimular creatividad, coordinación y aprendizaje temprano.",
-    "whatsapp": "573001234567",
-    "featured": true
-  },
-  {
-    "id": 7,
-    "name": "Mochila Infantil Ligera",
-    "price": 85000,
-    "oldPrice": 105000,
-    "image": "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=700&q=80",
-    "category": "infantil",
-    "description": "Mochila cómoda y resistente para colegio, viajes y salidas familiares.",
-    "whatsapp": "573001234567"
-  },
-  {
-    "id": 8,
-    "name": "Cama Suave para Mascotas",
-    "price": 125000,
-    "oldPrice": 150000,
-    "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=700&q=80",
-    "category": "mascotas",
-    "description": "Cama acolchada para perros y gatos, fácil de ubicar en cualquier espacio.",
-    "whatsapp": "573001234567",
-    "featured": true
-  },
-  {
-    "id": 9,
-    "name": "Dispensador de Agua para Mascotas",
-    "price": 90000,
-    "oldPrice": 115000,
-    "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=700&q=80",
-    "category": "mascotas",
-    "description": "Dispensador práctico para mantener agua disponible durante el día.",
-    "whatsapp": "573001234567"
-  },
-  {
-    "id": 10,
-    "name": "Audífonos Bluetooth Pro",
-    "price": 140000,
-    "oldPrice": 180000,
-    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=80",
-    "category": "tecnologia",
-    "description": "Audífonos inalámbricos con sonido claro para llamadas, música y entretenimiento.",
-    "whatsapp": "573001234567",
-    "featured": true
-  },
-  {
-    "id": 11,
-    "name": "Soporte Ajustable para Celular",
-    "price": 65000,
-    "oldPrice": 85000,
-    "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=80",
-    "category": "tecnologia",
-    "description": "Soporte estable para escritorio, videollamadas, contenido y estudio.",
-    "whatsapp": "573001234567"
-  },
-  {
-    "id": 12,
-    "name": "Camiseta Básica Hombre",
-    "price": 70000,
-    "oldPrice": 90000,
-    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80",
-    "category": "vestuario-hombre",
-    "description": "Camiseta versátil para looks casuales, cómoda y fácil de combinar.",
-    "whatsapp": "573001234567"
-  },
-  {
-    "id": 13,
-    "name": "Chaqueta Casual Hombre",
-    "price": 185000,
-    "oldPrice": 230000,
-    "image": "https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?auto=format&fit=crop&w=700&q=80",
-    "category": "vestuario-hombre",
-    "description": "Chaqueta ligera para uso diario, viajes y clima fresco.",
-    "whatsapp": "573001234567"
-  },
-  {
-    "id": 14,
-    "name": "Bolso Cruzado Mujer",
-    "price": 115000,
-    "oldPrice": 145000,
-    "image": "https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=700&q=80",
-    "category": "vestuario-mujer",
-    "description": "Bolso compacto con correa ajustable para uso diario.",
-    "whatsapp": "573001234567",
-    "featured": true
-  },
-  {
-    "id": 15,
-    "name": "Blusa Ligera Mujer",
-    "price": 85000,
-    "oldPrice": 110000,
-    "image": "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=700&q=80",
-    "category": "vestuario-mujer",
-    "description": "Blusa fresca y elegante para combinar con jeans, falda o pantalón.",
-    "whatsapp": "573001234567"
-  },
-  {
-    "id": 16,
-    "name": "Tenis Urbanos Unisex",
-    "price": 160000,
-    "oldPrice": 210000,
-    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80",
-    "category": "calzado",
-    "description": "Tenis cómodos para caminar, salir y combinar con ropa casual.",
-    "whatsapp": "573001234567",
-    "featured": true
-  },
-  {
-    "id": 17,
-    "name": "Sandalias Confort",
-    "price": 95000,
-    "oldPrice": 125000,
-    "image": "https://images.unsplash.com/photo-1562273138-f46be4ebdf33?auto=format&fit=crop&w=700&q=80",
-    "category": "calzado",
-    "description": "Sandalias livianas para descanso, clima cálido y uso diario.",
-    "whatsapp": "573001234567"
-  },
-  {
-    "id": 18,
-    "name": "Organizador de Maletero",
-    "price": 120000,
-    "oldPrice": 155000,
-    "image": "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=700&q=80",
-    "category": "vehiculos",
-    "description": "Organizador plegable para mantener herramientas, compras y accesorios en orden.",
-    "whatsapp": "573001234567"
-  },
-  {
-    "id": 19,
-    "name": "Compresor de Aire Portátil",
-    "price": 250000,
-    "oldPrice": 310000,
-    "image": "https://images.unsplash.com/photo-1537984822441-cff330075342?auto=format&fit=crop&w=700&q=80",
-    "category": "vehiculos",
-    "description": "Compresor compacto para inflar llantas, balones y accesorios de viaje.",
-    "whatsapp": "573001234567"
-  },
-  {
-    "id": 20,
-    "name": "Freidora de Aire Compacta",
-    "price": 280000,
-    "oldPrice": 350000,
-    "image": "https://images.unsplash.com/photo-1585515320310-259814833e62?auto=format&fit=crop&w=700&q=80",
-    "category": "electrodomesticos",
-    "description": "Freidora de aire para preparar comidas rápidas con menos aceite.",
-    "whatsapp": "573001234567"
-  },
-  {
-    "id": 21,
-    "name": "Licuadora Personal",
-    "price": 145000,
-    "oldPrice": 180000,
-    "image": "https://images.unsplash.com/photo-1570222094114-d054a817e56b?auto=format&fit=crop&w=700&q=80",
-    "category": "electrodomesticos",
-    "description": "Licuadora compacta para batidos, jugos y preparaciones rápidas.",
-    "whatsapp": "573001234567"
-  },
-  {
-    "id": 22,
-    "name": "Bandas Elásticas de Entrenamiento",
-    "price": 70000,
-    "oldPrice": 95000,
-    "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=700&q=80",
-    "category": "deportes",
-    "description": "Set de bandas para rutinas de fuerza, movilidad y entrenamiento en casa.",
-    "whatsapp": "573001234567"
-  },
-  {
-    "id": 23,
-    "name": "Termo Deportivo de Acero",
-    "price": 85000,
-    "oldPrice": 110000,
-    "image": "https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=700&q=80",
-    "category": "deportes",
-    "description": "Termo resistente para mantener tus bebidas durante entrenamientos y viajes.",
-    "whatsapp": "573001234567"
-  },
-  {
-    "id": 24,
-    "name": "Kit de Destornilladores de Precisión",
-    "price": 95000,
-    "oldPrice": 125000,
-    "image": "https://images.unsplash.com/photo-1581147036324-c1c9a3c7c78d?auto=format&fit=crop&w=700&q=80",
-    "category": "herramientas",
-    "description": "Kit compacto para reparaciones pequeñas, tecnología y mantenimiento del hogar.",
-    "whatsapp": "573001234567"
-  },
-  {
-    "id": 25,
-    "name": "Linterna Recargable LED",
-    "price": 65000,
-    "oldPrice": 90000,
-    "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=700&q=80",
-    "category": "herramientas",
-    "description": "Linterna práctica para emergencias, viajes, trabajo y uso doméstico.",
-    "whatsapp": "573001234567"
-  },
-  {
-    "id": 26,
-    "name": "Luces Decorativas LED",
-    "price": 75000,
-    "oldPrice": 98000,
-    "image": "https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?auto=format&fit=crop&w=700&q=80",
-    "category": "temporada",
-    "description": "Luces decorativas para celebraciones, vitrinas, habitaciones y espacios especiales.",
-    "whatsapp": "573001234567"
-  },
-  {
-    "id": 27,
-    "name": "Set de Regalos de Temporada",
-    "price": 135000,
-    "oldPrice": 165000,
-    "image": "https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&w=700&q=80",
-    "category": "temporada",
-    "description": "Set práctico para sorprender en fechas especiales con una presentación cuidada.",
-    "whatsapp": "573001234567"
-  },
-  {
-    "id": 28,
-    "name": "Caja Fuerte Mediana 20E",
-    "price": 150000,
-    "oldPrice": 185000,
-    "image": "assets/images/product-placeholder.svg",
-    "category": "hogar",
-    "description": "Caja fuerte mediana modelo 20E para guardar dinero, documentos y objetos de valor en casa u oficina.",
+    "description": "Suplemento nutricional con Omega 3-6-9 en 60 cápsulas blandas. Apoya el control del azúcar y de la presión arterial.",
     "whatsapp": "573044151020",
-    "badge": "Seguridad"
+    "featured": true,
+    "images": [
+      {
+        "src": "assets/images/products/triplered/triplered-frasco.jpg",
+        "label": "Frasco"
+      },
+      {
+        "src": "assets/images/products/triplered/triplered-capsulas.jpg",
+        "label": "Cápsulas"
+      }
+    ]
   },
   {
     "id": 29,
@@ -471,11 +201,29 @@
     "name": "Cobija Multiclima",
     "price": 65000,
     "oldPrice": 85000,
-    "image": "assets/images/product-placeholder.svg",
+    "image": "assets/images/products/cobija-multiclima/cobija-roja-sofa.jpg",
     "category": "hogar",
     "description": "Cobija cómoda para todo clima: abriga en noches frías y se siente ligera cuando el ambiente es más cálido.",
     "whatsapp": "573044151020",
-    "badge": "Oferta"
+    "badge": "Oferta",
+    "images": [
+      {
+        "src": "assets/images/products/cobija-multiclima/cobija-roja-sofa.jpg",
+        "label": "Roja"
+      },
+      {
+        "src": "assets/images/products/cobija-multiclima/cobijas-colores.jpg",
+        "label": "Colores"
+      },
+      {
+        "src": "assets/images/products/cobija-multiclima/cobijas-cama.jpg",
+        "label": "En cama"
+      },
+      {
+        "src": "assets/images/products/cobija-multiclima/cobija-azul.jpg",
+        "label": "Azul"
+      }
+    ]
   },
   {
     "id": 36,
@@ -508,62 +256,178 @@
     "name": "Protector de Colchón Antiderrame",
     "price": 75000,
     "oldPrice": 95000,
-    "image": "assets/images/product-placeholder.svg",
+    "image": "assets/images/products/protector-colchon/protector-rojo.jpg",
     "category": "hogar",
     "description": "Protector de colchón antiderrame para mantener tu cama limpia y cuidada por más tiempo.",
-    "whatsapp": "573044151020"
+    "whatsapp": "573044151020",
+    "images": [
+      {
+        "src": "assets/images/products/protector-colchon/protector-rojo.jpg",
+        "label": "Rojo"
+      },
+      {
+        "src": "assets/images/products/protector-colchon/protector-turquesa.jpg",
+        "label": "Turquesa"
+      },
+      {
+        "src": "assets/images/products/protector-colchon/protector-azul.jpg",
+        "label": "Azul"
+      },
+      {
+        "src": "assets/images/products/protector-colchon/protector-beige.jpg",
+        "label": "Beige"
+      },
+      {
+        "src": "assets/images/products/protector-colchon/protector-ajustable.jpg",
+        "label": "Ajustable"
+      }
+    ]
   },
   {
     "id": 38,
     "name": "Combo Protector + Sábanas",
     "price": 120000,
     "oldPrice": 155000,
-    "image": "assets/images/product-placeholder.svg",
+    "image": "assets/images/products/combo-protector-sabanas/sabanas-juego.jpg",
     "category": "hogar",
     "description": "Combo para vestir tu cama: protector de colchón antiderrame más juego de sábanas.",
     "whatsapp": "573044151020",
-    "badge": "Combo"
+    "badge": "Combo",
+    "images": [
+      {
+        "src": "assets/images/products/combo-protector-sabanas/sabanas-juego.jpg",
+        "label": "Juego"
+      },
+      {
+        "src": "assets/images/products/combo-protector-sabanas/sabanas-colores.jpg",
+        "label": "Colores"
+      },
+      {
+        "src": "assets/images/products/combo-protector-sabanas/sabanas-medidas.jpg",
+        "label": "Medidas"
+      },
+      {
+        "src": "assets/images/products/combo-protector-sabanas/sabana-ajustable.jpg",
+        "label": "Ajustable"
+      }
+    ]
   },
   {
     "id": 39,
     "name": "Colcha Premium Doble Tono",
     "price": 110000,
     "oldPrice": 140000,
-    "image": "assets/images/product-placeholder.svg",
+    "image": "assets/images/products/colcha-doble-tono/colcha-rosada.jpg",
     "category": "hogar",
     "description": "Colcha premium de doble tono para darle un aire renovado y elegante a tu habitación.",
-    "whatsapp": "573044151020"
+    "whatsapp": "573044151020",
+    "images": [
+      {
+        "src": "assets/images/products/colcha-doble-tono/colcha-rosada.jpg",
+        "label": "Rosada"
+      },
+      {
+        "src": "assets/images/products/colcha-doble-tono/colcha-azul.jpg",
+        "label": "Azul"
+      },
+      {
+        "src": "assets/images/products/colcha-doble-tono/colcha-verde.jpg",
+        "label": "Verde"
+      },
+      {
+        "src": "assets/images/products/colcha-doble-tono/colcha-beige.jpg",
+        "label": "Beige"
+      }
+    ]
   },
   {
     "id": 40,
     "name": "Edredón Premium Doble Tono",
     "price": 130000,
     "oldPrice": 165000,
-    "image": "assets/images/product-placeholder.svg",
+    "image": "assets/images/products/edredon-doble-tono/edredon-rojo.jpg",
     "category": "hogar",
     "description": "Edredón premium de doble tono, cómodo y abrigador para tus noches de descanso.",
-    "whatsapp": "573044151020"
+    "whatsapp": "573044151020",
+    "images": [
+      {
+        "src": "assets/images/products/edredon-doble-tono/edredon-rojo.jpg",
+        "label": "Rojo"
+      },
+      {
+        "src": "assets/images/products/edredon-doble-tono/edredon-negro.jpg",
+        "label": "Negro"
+      },
+      {
+        "src": "assets/images/products/edredon-doble-tono/edredon-rosado-palo.jpg",
+        "label": "Rosado palo"
+      },
+      {
+        "src": "assets/images/products/edredon-doble-tono/edredon-fucsia.jpg",
+        "label": "Fucsia"
+      }
+    ]
   },
   {
     "id": 41,
     "name": "Sábanas Premium + Almohadas",
     "price": 80000,
     "oldPrice": 105000,
-    "image": "assets/images/product-placeholder.svg",
+    "image": "assets/images/products/sabanas-almohadas/sabanas-rosadas-set.jpg",
     "category": "hogar",
     "description": "Juego de sábanas premium con almohadas incluidas para completar tu cama.",
     "whatsapp": "573044151020",
-    "badge": "Combo"
+    "badge": "Combo",
+    "images": [
+      {
+        "src": "assets/images/products/sabanas-almohadas/sabanas-rosadas-set.jpg",
+        "label": "Juego"
+      },
+      {
+        "src": "assets/images/products/sabanas-almohadas/sabana-roja.jpg",
+        "label": "Rojo"
+      },
+      {
+        "src": "assets/images/products/sabanas-almohadas/sabana-rosada.jpg",
+        "label": "Rosado"
+      },
+      {
+        "src": "assets/images/products/sabanas-almohadas/sabana-azul.jpg",
+        "label": "Azul"
+      }
+    ]
   },
   {
     "id": 42,
     "name": "Botas Caterpillar Corte Medio",
     "price": 110000,
     "oldPrice": 140000,
-    "image": "assets/images/product-placeholder.svg",
+    "image": "assets/images/products/botas-caterpillar/bota-mostaza.jpg",
     "category": "calzado",
     "description": "Botas de corte medio estilo Caterpillar, resistentes y cómodas para el trabajo y el día a día.",
-    "whatsapp": "573044151020"
+    "whatsapp": "573044151020",
+    "images": [
+      {
+        "src": "assets/images/products/botas-caterpillar/bota-mostaza.jpg",
+        "label": "Mostaza"
+      },
+      {
+        "src": "assets/images/products/botas-caterpillar/bota-negra.jpg",
+        "label": "Negro"
+      },
+      {
+        "src": "assets/images/products/botas-caterpillar/bota-beige-negra.jpg",
+        "label": "Beige y negro"
+      },
+      {
+        "src": "assets/images/products/botas-caterpillar/bota-cafe.jpg",
+        "label": "Café"
+      },
+      {
+        "src": "assets/images/products/botas-caterpillar/bota-negra-caja.jpg",
+        "label": "Negro con caja"
+      }
+    ]
   },
   {
     "id": 43,
@@ -633,19 +497,31 @@
     "name": "Cartera Dama Estilo Vélez",
     "price": 65000,
     "oldPrice": 85000,
-    "image": "assets/images/product-placeholder.svg",
+    "image": "assets/images/products/cartera-dama/cartera-negra.jpg",
     "category": "vestuario-mujer",
     "description": "Cartera para dama estilo Vélez, elegante y práctica para el día a día.",
-    "whatsapp": "573044151020"
-  },
-  {
-    "id": 46,
-    "name": "Plancha a Vapor",
-    "price": 120000,
-    "oldPrice": 150000,
-    "image": "assets/images/product-placeholder.svg",
-    "category": "electrodomesticos",
-    "description": "Plancha a vapor para dejar tu ropa lisa y lista en menos tiempo.",
-    "whatsapp": "573044151020"
+    "whatsapp": "573044151020",
+    "images": [
+      {
+        "src": "assets/images/products/cartera-dama/cartera-negra.jpg",
+        "label": "Negra"
+      },
+      {
+        "src": "assets/images/products/cartera-dama/cartera-cafe.jpg",
+        "label": "Café"
+      },
+      {
+        "src": "assets/images/products/cartera-dama/cartera-camel.jpg",
+        "label": "Camel"
+      },
+      {
+        "src": "assets/images/products/cartera-dama/cartera-azul.jpg",
+        "label": "Azul"
+      },
+      {
+        "src": "assets/images/products/cartera-dama/cartera-colores.jpg",
+        "label": "Colores"
+      }
+    ]
   }
 ]
