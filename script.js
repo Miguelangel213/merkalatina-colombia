@@ -19,11 +19,10 @@ const CATEGORY_DEFINITIONS = [
 const CATEGORY_BY_SLUG = new Map(CATEGORY_DEFINITIONS.map((category) => [category.slug, category]));
 const FEATURED_CATEGORIES = ["hogar", "cocina", "tecnologia", "salud-belleza", "calzado", "vestuario-mujer"];
 const WHATSAPP_NUMBER = "573044151020";
-// Reemplaza "#" por el enlace real de cada red social.
 const SOCIAL_LINKS = [
-  { label: "Facebook de MerkaLatina", icon: "fa-brands fa-facebook-f", url: "#" },
-  { label: "YouTube de MerkaLatina", icon: "fa-brands fa-youtube", url: "#" },
-  { label: "Instagram de MerkaLatina", icon: "fa-brands fa-instagram", url: "#" }
+  { label: "Facebook de MerkaLatina", icon: "fa-brands fa-facebook-f", url: "https://www.facebook.com/profile.php?id=61558449320793" },
+  { label: "YouTube de MerkaLatina", icon: "fa-brands fa-youtube", url: "https://www.youtube.com/@MerkaLatinaColombia" },
+  { label: "Instagram de MerkaLatina", icon: "fa-brands fa-instagram", url: "https://www.instagram.com/merkalatina2026" }
 ];
 const CART_STORAGE_KEY = "merkalatina:cart";
 const catalogState = { mode: "featured", query: "", sort: "default" };
