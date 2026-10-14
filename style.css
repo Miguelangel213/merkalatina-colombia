@@ -567,3 +567,12 @@ section[id] { scroll-margin-top: 172px; }
 .about-mv-grid .about-value { display: flex; flex-direction: column; }
 .about-mv-photo { width: 150px; margin-top: auto; padding-top: 20px; }
 .about-mv-photo img { display: block; width: 150px; height: 200px; max-width: 100%; object-fit: cover; object-position: 50% 12%; border-radius: 14px; }
+
+/* Misión y Visión: foto al lado del texto */
+.about-mv-grid .about-mv-card { display: grid; grid-template-columns: minmax(0, 1fr) 150px; gap: 22px; align-items: start; }
+.about-mv-card .about-mv-photo { width: 150px; margin: 0; padding: 0; }
+@media (max-width: 680px) {
+  .about-mv-grid .about-mv-card { grid-template-columns: minmax(0, 1fr) 96px; gap: 14px; }
+  .about-mv-card .about-mv-photo, .about-mv-card .about-mv-photo img { width: 96px; }
+  .about-mv-card .about-mv-photo img { height: 128px; }
+}
