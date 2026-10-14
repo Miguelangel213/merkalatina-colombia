@@ -1,5 +1,26 @@
 [
   {
+    "id": 1,
+    "name": "Caja Fuerte tipo Libro",
+    "price": 80000,
+    "image": "assets/images/products/caja-fuerte-libro/caja-fuerte-libro-1.jpg",
+    "category": "hogar",
+    "description": "Caja fuerte con diseño de diccionario: una solución discreta y segura para guardar dinero, documentos, joyas y objetos de valor. Se mimetiza en cualquier estantería y es casi indetectable. Disponible en azul, marrón, negro y vinotinto.",
+    "whatsapp": "573044151020",
+    "images": [
+      {
+        "src": "assets/images/products/caja-fuerte-libro/caja-fuerte-libro-1.jpg",
+        "label": "Colores"
+      },
+      {
+        "src": "assets/images/products/caja-fuerte-libro/caja-fuerte-libro-2.jpg",
+        "label": "Abierta"
+      }
+    ],
+    "badge": "Discreta",
+    "featured": true
+  },
+  {
     "id": 4,
     "name": "TripleRed Omega 3-6-9",
     "price": 100000,
@@ -19,6 +40,30 @@
         "label": "Cápsulas"
       }
     ]
+  },
+  {
+    "id": 28,
+    "name": "Caja Fuerte Mediana 20E",
+    "price": 150000,
+    "image": "assets/images/products/caja-fuerte-20e/caja-fuerte-20e-1.jpg",
+    "category": "hogar",
+    "description": "Caja fuerte mediana modelo 20E con clave digital y llave de emergencia, diseñada para proteger tus objetos de valor contra robos o accesos no autorizados en hogares, oficinas o negocios.",
+    "whatsapp": "573044151020",
+    "images": [
+      {
+        "src": "assets/images/products/caja-fuerte-20e/caja-fuerte-20e-1.jpg",
+        "label": "Caja fuerte"
+      },
+      {
+        "src": "assets/images/products/caja-fuerte-20e/caja-fuerte-20e-2.jpg",
+        "label": "Digital"
+      },
+      {
+        "src": "assets/images/products/caja-fuerte-20e/caja-fuerte-20e-3.jpg",
+        "label": "Interior"
+      }
+    ],
+    "badge": "Seguridad"
   },
   {
     "id": 29,
@@ -523,5 +568,230 @@
         "label": "Colores"
       }
     ]
+  },
+  {
+    "id": 47,
+    "name": "Bombillo Proyector Navideño",
+    "price": 60000,
+    "image": "assets/images/products/proyector-navideno/proyector-navideno-1.jpg",
+    "category": "temporada",
+    "description": "Transforma balcones y espacios al aire libre en un espectáculo navideño con este proyector LED de luces vibrantes y figuras festivas. Instalación fácil: lo enroscas y listo.",
+    "whatsapp": "573044151020",
+    "images": [
+      {
+        "src": "assets/images/products/proyector-navideno/proyector-navideno-1.jpg",
+        "label": "Empaque"
+      },
+      {
+        "src": "assets/images/products/proyector-navideno/proyector-navideno-2.jpg",
+        "label": "En la sala"
+      },
+      {
+        "src": "assets/images/products/proyector-navideno/proyector-navideno-3.jpg",
+        "label": "Habitación"
+      },
+      {
+        "src": "assets/images/products/proyector-navideno/proyector-navideno-4.jpg",
+        "label": "Diseños"
+      },
+      {
+        "src": "assets/images/products/proyector-navideno/proyector-navideno-5.jpg",
+        "label": "Bombillo"
+      }
+    ],
+    "badge": "Navidad",
+    "featured": true
+  },
+  {
+    "id": 48,
+    "name": "Bombillo LED Giratorio de Colores",
+    "price": 70000,
+    "image": "assets/images/products/bombillo-giratorio/bombillo-giratorio-1.jpg",
+    "category": "temporada",
+    "description": "Bombillo LED con cúpula de cristal giratoria que proyecta luces de colores en paredes y techos. Rosca E27, perfecto para fiestas, celebraciones y decoración.",
+    "whatsapp": "573044151020",
+    "images": [
+      {
+        "src": "assets/images/products/bombillo-giratorio/bombillo-giratorio-1.jpg",
+        "label": "Bombillo"
+      },
+      {
+        "src": "assets/images/products/bombillo-giratorio/bombillo-giratorio-2.jpg",
+        "label": "Efecto luces"
+      },
+      {
+        "src": "assets/images/products/bombillo-giratorio/bombillo-giratorio-3.jpg",
+        "label": "Detalle"
+      },
+      {
+        "src": "assets/images/products/bombillo-giratorio/bombillo-giratorio-4.jpg",
+        "label": "Proyección"
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Gotas Anti-Depresión en Spray (2 frascos)",
+    "price": 50000,
+    "image": "assets/images/products/gotas-serenamino/gotas-serenamino-1.jpg",
+    "category": "salud-belleza",
+    "description": "Gotas en spray SerenAmino formuladas para brindar apoyo emocional y promover calma, equilibrio y bienestar en el día a día. Presentación práctica en spray, ideal para llevar contigo. Precio por 2 frascos.",
+    "whatsapp": "573044151020",
+    "badge": "2 frascos"
+  },
+  {
+    "id": 50,
+    "name": "Tren Eléctrico Retro Classic",
+    "price": 120000,
+    "image": "assets/images/products/tren-clasico/tren-clasico-1.jpg",
+    "category": "infantil",
+    "description": "Clásico juego de tren con locomotora, cuatro vagones, vehículo de carga, vías curvas y rectas. Faros LED, sonidos realistas y humo real: agrega agua en el recipiente detrás de la chimenea. Funciona con 3 pilas AA.",
+    "whatsapp": "573044151020",
+    "images": [
+      {
+        "src": "assets/images/products/tren-clasico/tren-clasico-1.jpg",
+        "label": "Caja"
+      },
+      {
+        "src": "assets/images/products/tren-clasico/tren-clasico-2.jpg",
+        "label": "Empaque"
+      }
+    ],
+    "badge": "Regalo ideal",
+    "featured": true
+  },
+  {
+    "id": 51,
+    "name": "Gorras Vélez Unicolor",
+    "price": 60000,
+    "image": "assets/images/products/gorras-velez/gorras-velez-1.jpg",
+    "category": "vestuario-hombre",
+    "description": "Gorra Vélez unicolor en tela tipo Drill Premium: gruesa, resistente y cómoda para el uso diario. Estilo moderno, elegante y versátil.",
+    "whatsapp": "573044151020"
+  },
+  {
+    "id": 52,
+    "name": "Shampoo Tinte Mi Color Sin Amoníaco (3 sobres)",
+    "price": 65000,
+    "image": "assets/images/products/shampoo-mi-color/shampoo-mi-color-1.jpg",
+    "category": "salud-belleza",
+    "description": "Cubre canas de forma efectiva y duradera, con resultados de más de 20 días. Negro sutil: déjalo actuar 10 minutos; negro intenso: 20 minutos o más. Caja de 250 ml en 10 sobres, color por 30 días (según el crecimiento del cabello) y cubrimiento inmediato. Precio por 3 sobres.",
+    "whatsapp": "573044151020",
+    "images": [
+      {
+        "src": "assets/images/products/shampoo-mi-color/shampoo-mi-color-1.jpg",
+        "label": "Caja"
+      },
+      {
+        "src": "assets/images/products/shampoo-mi-color/shampoo-mi-color-2.jpg",
+        "label": "Resultados"
+      },
+      {
+        "src": "assets/images/products/shampoo-mi-color/shampoo-mi-color-3.jpg",
+        "label": "Cómo usar"
+      }
+    ],
+    "badge": "3 sobres",
+    "featured": true
+  },
+  {
+    "id": 53,
+    "name": "Perfume para Hombre con Feromonas Damascus Pearl",
+    "price": 60000,
+    "image": "assets/images/products/perfume-damascus-pearl/perfume-damascus-pearl-1.jpg",
+    "category": "salud-belleza",
+    "description": "Perfume para hombre con feromonas que deja huella donde vayas y te hace ver más atractivo y seductor.",
+    "whatsapp": "573044151020",
+    "images": [
+      {
+        "src": "assets/images/products/perfume-damascus-pearl/perfume-damascus-pearl-1.jpg",
+        "label": "Frasco"
+      },
+      {
+        "src": "assets/images/products/perfume-damascus-pearl/perfume-damascus-pearl-2.jpg",
+        "label": "Presentación"
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "name": "HappyPets Spray para Mascotas (3 tarros)",
+    "price": 50000,
+    "image": "assets/images/products/happypets/happypets-1.jpg",
+    "category": "mascotas",
+    "description": "Spray natural para perros y gatos, formulado para mantenerlos frescos y cuidados. Ayuda a eliminar el sarro, el mal aliento y otras afecciones bucales. Precio por 3 tarros.",
+    "whatsapp": "573044151020",
+    "images": [
+      {
+        "src": "assets/images/products/happypets/happypets-1.jpg",
+        "label": "Frasco"
+      },
+      {
+        "src": "assets/images/products/happypets/happypets-2.jpg",
+        "label": "Para mascotas"
+      }
+    ],
+    "badge": "3 tarros"
+  },
+  {
+    "id": 55,
+    "name": "Mini Cámara Digital",
+    "price": 100000,
+    "image": "assets/images/products/mini-camara/mini-camara-1.jpg",
+    "category": "tecnologia",
+    "description": "Mini cámara compacta para capturar y compartir momentos inolvidables en tus viajes sin cargar equipo voluminoso. Ideal para crear contenido visual atractivo para redes sociales.",
+    "whatsapp": "573044151020",
+    "images": [
+      {
+        "src": "assets/images/products/mini-camara/mini-camara-1.jpg",
+        "label": "Retro lila"
+      },
+      {
+        "src": "assets/images/products/mini-camara/mini-camara-2.jpg",
+        "label": "4K"
+      },
+      {
+        "src": "assets/images/products/mini-camara/mini-camara-3.jpg",
+        "label": "Plateada"
+      },
+      {
+        "src": "assets/images/products/mini-camara/mini-camara-4.jpg",
+        "label": "Retro"
+      }
+    ],
+    "badge": "Para viajes",
+    "featured": true
+  },
+  {
+    "id": 56,
+    "name": "Cadena de Luces 1000 LED con Panel Solar",
+    "price": 60000,
+    "image": "assets/images/products/luces-1000-led/luces-1000-led-1.jpg",
+    "category": "temporada",
+    "description": "Cadena de luces súper larga y brillante de 1000 LED (cable de 100 m + 3 m de conexión), para rodear vallas, patios, techos y árboles. Incluye carrete para guardarla sin enredos, panel solar y control remoto.",
+    "whatsapp": "573044151020",
+    "images": [
+      {
+        "src": "assets/images/products/luces-1000-led/luces-1000-led-1.jpg",
+        "label": "Carrete"
+      },
+      {
+        "src": "assets/images/products/luces-1000-led/luces-1000-led-2.jpg",
+        "label": "Solar"
+      },
+      {
+        "src": "assets/images/products/luces-1000-led/luces-1000-led-3.jpg",
+        "label": "Decoración"
+      },
+      {
+        "src": "assets/images/products/luces-1000-led/luces-1000-led-4.jpg",
+        "label": "Colores"
+      },
+      {
+        "src": "assets/images/products/luces-1000-led/luces-1000-led-5.jpg",
+        "label": "Carga solar"
+      }
+    ],
+    "badge": "Decoración"
   }
 ]
