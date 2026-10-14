@@ -664,10 +664,20 @@
     "id": 51,
     "name": "Gorras Vélez Unicolor",
     "price": 60000,
-    "image": "assets/images/products/gorras-velez/gorras-velez-1.jpg",
+    "image": "assets/images/products/gorras-velez/gorras-velez-real-1.jpg",
     "category": "vestuario-hombre",
-    "description": "Gorra Vélez unicolor en tela tipo Drill Premium: gruesa, resistente y cómoda para el uso diario. Estilo moderno, elegante y versátil.",
-    "whatsapp": "573044151020"
+    "description": "Gorra Vélez unicolor en tela tipo Drill Premium: gruesa, resistente y cómoda para el uso diario, con el logo Vélez bordado. Estilo moderno, elegante y versátil. Disponible en vinotinto, azul, rosado, verde, naranja y menta.",
+    "whatsapp": "573044151020",
+    "images": [
+      {
+        "src": "assets/images/products/gorras-velez/gorras-velez-real-1.jpg",
+        "label": "Vinotinto, azul y rosado"
+      },
+      {
+        "src": "assets/images/products/gorras-velez/gorras-velez-real-2.jpg",
+        "label": "Verde, naranja y menta"
+      }
+    ]
   },
   {
     "id": 52,
@@ -766,11 +776,15 @@
     "id": 56,
     "name": "Cadena de Luces 1000 LED con Panel Solar",
     "price": 60000,
-    "image": "assets/images/products/luces-1000-led/luces-1000-led-1.jpg",
+    "image": "assets/images/products/luces-1000-led/luces-1000-led-solar.jpg",
     "category": "temporada",
     "description": "Cadena de luces súper larga y brillante de 1000 LED (cable de 100 m + 3 m de conexión), para rodear vallas, patios, techos y árboles. Incluye carrete para guardarla sin enredos, panel solar y control remoto.",
     "whatsapp": "573044151020",
     "images": [
+      {
+        "src": "assets/images/products/luces-1000-led/luces-1000-led-solar.jpg",
+        "label": "Con panel solar"
+      },
       {
         "src": "assets/images/products/luces-1000-led/luces-1000-led-1.jpg",
         "label": "Carrete"
@@ -786,10 +800,6 @@
       {
         "src": "assets/images/products/luces-1000-led/luces-1000-led-4.jpg",
         "label": "Colores"
-      },
-      {
-        "src": "assets/images/products/luces-1000-led/luces-1000-led-5.jpg",
-        "label": "Carga solar"
       }
     ],
     "badge": "Decoración"
