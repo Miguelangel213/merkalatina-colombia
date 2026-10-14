@@ -564,3 +564,6 @@ section[id] { scroll-margin-top: 172px; }
 .about-hero-visual.about-photo { aspect-ratio: 4 / 5; max-width: 470px; }
 .about-hero-visual.about-photo img { object-position: 50% 30%; }
 @media (max-width: 680px) { .about-hero-visual.about-photo { max-width: 340px; } }
+.about-mv-grid .about-value { display: flex; flex-direction: column; }
+.about-mv-photo { width: 100%; max-width: 230px; margin-top: auto; padding-top: 22px; }
+.about-mv-photo img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: 50% 12%; border-radius: 16px; }
